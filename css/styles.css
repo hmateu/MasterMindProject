@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+@media (min-width:778px) {
+    .logoM{
+        height: 9.375em;
+    }
+    .homeImg{
+        height: 25em;
+    }
+}
