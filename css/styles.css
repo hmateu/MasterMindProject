@@ -41,8 +41,8 @@ a{
         width: 100%;
     }
     .btnMain{
-        width: 60%;
-        height: 2em;
+        width: 70%;
+        height: 2.6em;
     }
 }
 /* Vista ordenador */
@@ -54,7 +54,7 @@ a{
         height: 25em;
     }
     .bodyMasterMind{
-        margin-top: 1.5em;
+        margin-top: 2em;
         row-gap: 4em;
     }
     .btnsMain{
@@ -66,8 +66,8 @@ a{
         width: 100%;
     }
     .btnMain{
-        width: 100%;
-        height: 2em;
+        width: 120%;
+        height: 2.5em;
         font-size: 2em;
     }
 }
