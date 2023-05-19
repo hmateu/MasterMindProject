@@ -118,4 +118,32 @@ a {
         height: 1.5em;
         font-size: 2em;
     }
+    .sectionTitle {
+        /* background-color: red; */
+        width: 90vw;
+        font-size: 2em;
+        border-bottom: .1em solid black;
+    }
+    .bodySection {
+        /* border: 0.2em solid black; */
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        row-gap: 1em;
+    }
+    .section {
+        /* border: 0.5em dotted red */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        column-gap: 2em;
+        /* background-color: red; */
+    }
+    .sectionText{
+        font-size: 1.3em;
+    }
+    .imgDeveloper{
+        height: 15em;
+    }
 }
