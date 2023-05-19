@@ -30,7 +30,8 @@ a {
 }
 
 /* Vista móvil */
-@media (max-width:576px) {
+/* @media (max-width:576px) { */
+@media (max-width:1199px) {
     .bodyMasterMind {
         margin-top: .5em;
         row-gap: 2em;
@@ -91,16 +92,16 @@ a {
 /* Vista ordenador */
 @media (min-width:1200px) {
     .logoM {
-        height: 9.375em;
+        height: 6em;
     }
 
     .homeImg {
-        height: 25em;
+        height: 17em;
     }
 
     .bodyMasterMind {
-        margin-top: 2em;
-        row-gap: 4em;
+        margin-top: 1em;
+        row-gap: 2em;
     }
 
     .btnsMain {
@@ -108,13 +109,13 @@ a {
         display: flex;
         flex-direction: column;
         align-items: center;
-        row-gap: 2em;
+        row-gap: 1em;
         width: 100%;
     }
 
     .btnMain {
         width: 120%;
-        height: 2.5em;
+        height: 1.5em;
         font-size: 2em;
     }
 }
