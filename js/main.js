@@ -1,7 +1,7 @@
 //Combinación ganadora
-let winnerChoice = [3, 4, 1, 5];
+let winnerChoice = [4, 6, 1, 5];
 //Combinación de cada jugada
-let currentChoice = [4, 5, 1, 9];
+let currentChoice = [4, 6, 1, 5];
 //Aciertos en cada jugada
 let matchBall = [];
 //Bola acertada en ubicación incorrecta
@@ -16,51 +16,52 @@ let whenMatch = [];
 let whenUnMatch = [];
 
 //Cada vez que haya una coincidencia sumo 1 a successBall
+console.log(`>> EMPIEZAN las comparaciones <<`);
+console.log(`winnerChoice = [${winnerChoice}]`);
+console.log(`currentChoice = [${currentChoice}]`);
+console.log("");
 winnerChoice.map((element, i) => {
     //Si la bola de winnerChoice es igual a la de currentChoice
     if (element == currentChoice[i]) {
-        console.log("-------");
-        console.log(`Posición ${i} Misma bola en winnerChoice y currentChoice que es la bola número ${element}`);
-        console.log("-------");
+        console.log(`WinnerChoice[${i}] = ${element}`);
+        console.log(`CurrentChoice[${i}] = ${currentChoice[i]}`);
+        console.log("¡¡ MATCH !!");
+        console.log("");
         matchBall[i] = "true";
         successBall++;
     } else {
         //Si la bola es diferente, la comparo en el resto de bolas que quedan del currentChoice
-        console.log(`Posición ${i} de winnerChoice, bola ${element} NO MATCH`);
-        i++;
-        for (let j = i; j <= currentChoice.length-1; j++) {
-            console.log(`Comparo ${element} de winnerChoice con posición ${j} del currentChoice, que es ${currentChoice[j]}`);
+        console.log(`WinnerChoice[${i}] = ${element}`);
+        console.log(`CurrentChoice[${i}] = ${currentChoice[i]}`);
+        console.log("NO MATCH");
+        console.log("");
+        //i++;
+        //for (let j = i; j <= currentChoice.length-1; j++) {
+            //console.log(`Comparo ${element} de winnerChoice con posición ${j} del currentChoice, que es ${currentChoice[j]}`);
             // if (element == currentChoice[j++]) {
             //     wrongPositionBall[i] = "true";
             //     unSuccessBall++;
             // }
-        }
+        //}
     }
 })
+console.log(`>> TERMINAN las comparaciones <<`);
+console.log("");
 
 //Averiguar si ha ganado la partida o continua jugando
 if (successBall == 4) {
-    console.log("Ha ganado la partida");
+    console.log("¡¡ENHORABUENA!! Ha ganado la partida.");
 } else {
-    console.log("Sigue probando");
-
+    console.log("No has acertado la combinación ganadora");
+    console.log("Sigue jugando");
+    console.log("");
     //Sacar la posición de las bolas que se han acerado.
     matchBall.map((element, i) => {
         if (element == "true") {
             whenMatch.push(i);
         }
     })
-    //Sacar la posición de las bolas que se ha acertado el color pero no la posición
-
-    for(i=0;i<whenMatch.length;i++){
-        if(i==0){
-            console.log(`La posición donde se encuentran las bolas que has acertado son:`);
-            console.log(whenMatch[i]);
-        }else{
-            console.log(whenMatch[i]);
-        }
-
-    }
+    
     console.log(`Hay ${whenMatch.length} bolas en la posición correcta`);
 }
 
