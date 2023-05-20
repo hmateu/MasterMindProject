@@ -29,6 +29,18 @@ a {
     justify-content: center;
     align-items: center;
 }
+.easyLevel{
+    background: url("../img/easyLevel.png") no-repeat;
+    background-position: bottom left;
+}
+.mediumLevel{
+    background: url("../img/mediumLevel.png") no-repeat;
+    background-position: bottom left;
+}
+.hardLevel{
+    background: url("../img/hardLevel.png") no-repeat;
+    background-position: bottom center;
+}
 
 /* Vista móvil */
 /* @media (max-width:576px) { */
@@ -69,6 +81,12 @@ a {
         width: 12em;
         /* height: 2.6em; */
         height: 5em;
+    }
+    .easyLevel{
+    }
+    .mediumLevel{
+    }
+    .hardLevel{
     }
 
     .sectionTitle {
