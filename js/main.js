@@ -1,7 +1,7 @@
 //Combinación ganadora
-let winnerChoice = [5, 3, 1, 5];
+let winnerChoice = [3, 4, 1, 5];
 //Combinación de cada jugada
-let currentChoice = [2, 6, 1, 9];
+let currentChoice = [4, 5, 1, 9];
 //Aciertos en cada jugada
 let matchBall = [];
 //Bola acertada en ubicación incorrecta
@@ -19,18 +19,22 @@ let whenUnMatch = [];
 winnerChoice.map((element, i) => {
     //Si la bola de winnerChoice es igual a la de currentChoice
     if (element == currentChoice[i]) {
-        console.log("MATCH")
+        console.log("-------");
+        console.log(`Posición ${i} Misma bola en winnerChoice y currentChoice que es la bola número ${element}`);
+        console.log("-------");
         matchBall[i] = "true";
         successBall++;
     } else {
         //Si la bola es diferente, la comparo en el resto de bolas que quedan del currentChoice
-        console.log("NO MATCH")
-        // for (let j = i++; j <= currentChoice.length; j++) {
-        //     if (element == currentChoice[j]) {
-        //         wrongPositionBall[i] = "true";
-        //         unSuccessBall++;
-        //     }
-        // }
+        console.log(`Posición ${i} de winnerChoice, bola ${element} NO MATCH`);
+        i++;
+        for (let j = i; j <= currentChoice.length-1; j++) {
+            console.log(`Comparo ${element} de winnerChoice con posición ${j} del currentChoice, que es ${currentChoice[j]}`);
+            // if (element == currentChoice[j++]) {
+            //     wrongPositionBall[i] = "true";
+            //     unSuccessBall++;
+            // }
+        }
     }
 })
 
