@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: black;
 }
 
 body {
@@ -101,24 +102,26 @@ a {
 /* Vista móvil */
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
-    .container {
-        row-gap: 1.5em;
-    }
-
+    
     .navBar {
         height: 17vh;
+        margin-bottom: 1em;
     }
+
 
     .masterMainBody,
     .indexBody {
-        height: 83vh;
         row-gap: 2em;
+    }
+
+    .homeImg {
+        height: 12em;
     }
 
     .mainButtons {
         display: flex;
         flex-direction: column;
-        row-gap: 1em;
+        row-gap: 1.5em;
     }
 
     .mainBtn {
@@ -126,10 +129,23 @@ a {
         justify-content: center;
         align-items: center;
         width: 12em;
-        font-size: 1.3em;
+        font-size: 1em;
         height: 2em;
-        border: .1em solid black;
+        background-color: antiquewhite;
         border-radius: .5em;
+    }
+
+    .playGame{
+        width: 8em;
+        font-size: 2em;
+        height: 3em;
+    }
+
+    .secundaryBtns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1em;
     }
 
     /* .bodyMasterMind,
@@ -201,18 +217,52 @@ a {
 
 /* Vista ordenador */
 @media (min-width:1200px) {
+
     .navBar {
-        height: 10vh;
+        margin-bottom: 2em;
+        /* background-color: lightcoral; */
+    }
+
+    .logo{
+        height: 18vh;
     }
 
     .masterMainBody,
     .indexBody {
-        height: 90vh;
+        row-gap: 5em;
+        /* background-color: lightblue; */
     }
 
-    /* .homeImg {
-        height: 15em;
-    } */
+    .homeImg {
+        height: 25em;
+    }
+
+    .mainButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5em;
+    }
+    .secundaryBtns{
+        display: flex;
+        column-gap: 1em;
+    }
+
+    .mainBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        font-size: 1.2em;
+        height: 2em;
+        background-color: antiquewhite;
+        border-radius: .5em;
+    }
+    .playGame{
+        width: 15em;
+        font-size: 2em;
+        height: 2.5em;
+    }
 
     /* .bodyMasterMind,
     .bodyLevel {
