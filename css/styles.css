@@ -22,8 +22,7 @@ a {
     background-color: lightcoral;
 } */
 
-.masterMainBody,
-.indexBody {
+.masterMainBody{
     /* background-color: lightblue; */
     display: flex;
     flex-direction: column;
@@ -109,8 +108,7 @@ a {
     }
 
 
-    .masterMainBody,
-    .indexBody {
+    .masterMainBody {
         row-gap: 2em;
     }
 
@@ -146,6 +144,21 @@ a {
         flex-direction: column;
         align-items: center;
         row-gap: 1em;
+    }
+
+    .levelsBody{
+        margin-top: 2em;
+    }
+
+    .levelBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+        border-radius: .5em;
+        width: 8em;
+        font-size: 2em;
+        height: 3em;
     }
 
     /* .bodyMasterMind,
