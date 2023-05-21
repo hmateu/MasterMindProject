@@ -1,69 +1,36 @@
-//Combinación ganadora
-let winnerChoice = [4, 6, 1, 5];
-//Combinación de cada jugada
-let currentChoice = [4, 1, 6, 5];
-//Aciertos en cada jugada
-let matchBall = [];
-//Bola acertada en ubicación incorrecta
-let wrongPositionBall = [];
-//Cada acierto de bola en su ubicación correcta suma 1. Si llega a 4 es porque ha ganado en modo fácil
-let successBall = 0;
-//Cada acierto de bola que no este en su ubicación correcta suma 1.
-let unSuccessBall = 0;
-//Guarda la posición de la bola que se ha acertado
-let whenMatch = [];
-//Guarda la posición de la bola que se ha acertado el color pero no la posición
-let whenUnMatch = [];
-
-//Cada vez que haya una coincidencia sumo 1 a successBall
-console.log(`>> EMPIEZAN las comparaciones <<`);
-console.log(`winnerChoice = [${winnerChoice}]`);
-console.log(`currentChoice = [${currentChoice}]`);
-console.log("");
-winnerChoice.map((element, i) => {
-    //Si la bola de winnerChoice es igual a la de currentChoice
-    if (element == currentChoice[i]) {
-        console.log(`WinnerChoice[${i}] = ${element}`);
-        console.log(`CurrentChoice[${i}] = ${currentChoice[i]}`);
-        console.log("¡¡ MATCH !!");
-        console.log("");
-        matchBall[i] = "true";
-        successBall++;
-    } else {
-        //Si la bola es diferente, la comparo en el resto de bolas que quedan del currentChoice
-        console.log(`WinnerChoice[${i}] = ${element}`);
-        console.log(`CurrentChoice[${i}] = ${currentChoice[i]}`);
-        console.log("NO MATCH");
-        for (let j = 0; j < winnerChoice.length; j++) {
-            console.log(`Comparo ${element} de winnerChoice con posición ${j} del currentChoice, que es ${currentChoice[j]}`);
-            if(element == currentChoice[j]){
-                console.log(`Element (${element}) es igual a posición ${j} del currentChoice ${currentChoice[j]}`);
-                unSuccessBall++;
-            }
-        }
-        console.log("");
-    }
-})
-console.log(`>> TERMINAN las comparaciones <<`);
-console.log("");
-
-//Averiguar si ha ganado la partida o continua jugando
-if (successBall == 4) {
-    console.log("¡¡ENHORABUENA!! Ha ganado la partida.");
-} else {
-    console.log("No has acertado la combinación ganadora");
-    console.log("Sigue jugando");
-    console.log("");
-    //Sacar la posición de las bolas que se han acerado.
-    matchBall.map((element, i) => {
-        if (element == "true") {
-            whenMatch.push(i);
+let levelBtn = document.getElementsByClassName("levelBtn");
+let arrayLevel = Array.from(levelBtn);
+arrayLevel.map(element => {
+    element.addEventListener("click", (e) => {
+        if (e.target.id == "easyLvl") {
+            difficultyChoice("easyLvl");
+            window.sessionStorage.setItem("difficulty",e.target.id);
+            window.location.href="../pages/colours.html";
+        } else if(e.target.id == "mediumLvl"){
+            difficultyChoice("mediumLvl");
+            window.sessionStorage.setItem("difficulty",e.target.id);
+            window.location.href="../pages/colours.html";
+        }else{
+            difficultyChoice("hardLvl");
+            window.sessionStorage.setItem("difficulty",e.target.id);
+            window.location.href="../pages/colours.html";
         }
     })
+});
 
-    console.log(`Hay ${whenMatch.length} bola/s en la posición correcta`);
-    console.log(`Hay ${unSuccessBall} bola/s en una posición diferente`);
-    // console.log(`Hay ${wrongPositionBall.length} bolas en la posición correcta`);
+
+const difficultyChoice = (difficulty) => {
+    if(difficulty == "easyLvl"){
+        alert(difficulty);
+        // let level = document.getElementById("easy");
+        // level.classList.remove("hidden");
+    }else if(difficulty == "mediumLvl"){
+        alert(difficulty);
+        // let level = document.getElementById("medium");
+        // level.classList.remove("hidden");
+    }else{
+        alert(difficulty);
+        // let level = document.getElementById("hard");
+        // level.classList.remove("hidden");
+    }
 }
-
-//Averigua cuantas bolas hay en la winnerChoice, aunque no esten en el lugar correcto
