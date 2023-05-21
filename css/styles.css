@@ -1,235 +1,257 @@
 * {
     box-sizing: border-box;
 }
-
+body{
+    margin: 0;
+    padding: 0;
+}
 a {
     text-decoration: none;
 }
 
 .container {
-    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navBar{
+    background-color: lightcoral;
+}
+.masterMainBody,
+.indexBody{
+    background-color: lightblue;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.bodyMasterMind,
+/* .bodyMasterMind,
 .bodyLevel {
-    /* background-color: lime; */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    justify-content: center;
+} */
 
-.btnMain,
+/* .btnMain,
 .levelBtn {
     border: .1em solid black;
     border-radius: .5em;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.easyLevel{
+} */
+/* .easyLevel{
     background: url("../img/easyLevel.png") no-repeat;
     background-position: bottom left;
-}
-.mediumLevel{
+} */
+/* .mediumLevel{
     background: url("../img/mediumLevel.png") no-repeat;
     background-position: bottom left;
-}
-.hardLevel{
+} */
+/* .hardLevel{
     background: url("../img/hardLevel.png") no-repeat;
     background-position: bottom center;
-}
+} */
 
-.difficulty{
+/* .difficulty{
     display: flex;
     flex-direction: column;
     row-gap: .1em;
-}
-.inputColour{
+} */
+/* .inputColour{
     background-color: red;
     display: flex;
     justify-content: center;
-}
-.colours4{
+} */
+/* .colours4{
     height: 1em;
     width: 1em;
     border: .1em solid black;
-}
-.colours5{
+} */
+/* .colours5{
     height: 1em;
     width: 1em;
     border: .1em solid black;
-}
-.colours6{
+} */
+/* .colours6{
     height: 1em;
     width: 1em;
     border: .1em solid black;
-}
-.selectColour{
+} */
+/* .selectColour{
     display: flex;
     justify-content: space-around;
-}
-.inputColours{
+} */
+/* .inputColours{
     display: flex;
     column-gap: 1em;
     height: 1em;
     width: 1em;
     border: .1em solid black;
-}
-.hidden{
+} */
+/* .hidden{
     display: none;
-}
+} */
 
 /* Vista móvil */
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
-    .bodyMasterMind,
-    .bodyLevel {
-        margin-top: .5em;
+
+    .navBar {
+        height: 17vh;
     }
-    .bodyMasterMind {
-        row-gap: 2em;
+    .masterMainBody,
+    .indexBody{
+        height: 83vh;
     }
 
-    .btnsMain {
-        /* background-color: salmon; */
+    /* .bodyMasterMind,
+    .bodyLevel {
+        margin-top: .5em;
+    } */
+
+    /* .bodyMasterMind {
+        row-gap: 2em;
+    } */
+
+    /* .btnsMain {
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 1em;
         width: 100%;
-    }
+    } */
 
-    .btnMain {
+    /* .btnMain {
         width: 12em;
         height: 2.6em;
-    }
+    } */
 
-    .lvl .bodyMasterMind {
+    /* .lvl .bodyMasterMind {
         margin-top: 6em;
-    }
+    } */
 
-    .lvl .bodyLevel {
+    /* .lvl .bodyLevel {
         margin-top: 4.5em;
-    }
-    .bodyLevel {
-        row-gap: 1.5em;
-    }
-    .levelBtn {
-        width: 12em;
-        /* height: 2.6em; */
-        height: 5em;
-    }
-    .easyLevel{
-    }
-    .mediumLevel{
-    }
-    .hardLevel{
-    }
+    } */
 
-    .sectionTitle {
-        /* background-color: red; */
+    /* .bodyLevel {
+        row-gap: 1.5em;
+    } */
+
+    /* .levelBtn {
+        width: 12em;
+        height: 5em;
+    } */
+
+    /* .easyLevel {} */
+
+    /* .mediumLevel {} */
+
+    /* .hardLevel {} */
+
+    /* .sectionTitle {
         width: 90vw;
         font-size: 1.2em;
         border-bottom: .1em solid black;
-    }
+    } */
 
-    .bodySection {
-        /* border: 0.2em solid black; */
+    /* .bodySection {
         display: flex;
         flex-direction: column;
         width: 90vw;
         row-gap: 1em;
-    }
+    } */
 
-    .section {
-        /* border: 0.5em dotted red */
+    /* .section {
         display: flex;
         align-items: center;
         text-align: justify;
         column-gap: 1em;
-    }
+    } */
 
-    .bottomSection {
+    /* .bottomSection {
         display: flex;
         flex-direction: row-reverse;
-    }
+    } */
 }
 
 /* Vista ordenador */
 @media (min-width:1200px) {
-    .logoM {
-        height: 6em;
+    .navBar {
+        height: 10vh;
+    }
+    .masterMainBody,
+    .indexBody{
+        height: 90vh;
     }
 
-    .homeImg {
+    /* .homeImg {
         height: 15em;
-    }
+    } */
 
-    .bodyMasterMind,
+    /* .bodyMasterMind,
     .bodyLevel {
-        margin-top: 1em;
-        row-gap: 2em;
-        /* background-color: red; */
-    }
-    .bodyLevel{
+        height: 88vh;
+        row-gap: 10em;
+    } */
+
+    /* .bodyLevel {
         row-gap: 1em;
         margin-top: 2em;
-    }
+    } */
 
-    .btnsMain {
-        /* background-color: salmon; */
+    /* .btnsMain {
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 1em;
         width: 100%;
-    }
+    } */
 
-    .btnMain {
+    /* .btnMain {
         width: 120%;
         height: 1.5em;
         font-size: 2em;
-    }
-    .levelBtn {
+    } */
+
+    /* .levelBtn {
         width: 20em;
         height: 5em;
         font-size: 1.5em;
-    }
-    .sectionTitle {
-        /* background-color: red; */
+    } */
+
+    /* .sectionTitle {
         width: 90vw;
         font-size: 2em;
         border-bottom: .1em solid black;
-    }
-    .bodySection {
-        /* border: 0.2em solid black; */
-        /* background-color: red; */
+    } */
+
+    /* .bodySection {
+        border: 0.2em solid black;
+        background-color: red;
         display: flex;
         flex-direction: column;
         width: 90vw;
-    }
-    .section {
-        /* border: 0.5em dotted red */
+    } */
+
+    /* .section {
         display: flex;
         align-items: center;
-        justify-content: center;
-        text-align: justify;
         column-gap: 2em;
-        /* background-color: red; */
-    }
-    .sectionText{
+    } */
+
+    /* .sectionText {
         font-size: 1.3em;
-    }
-    .picture {
+    } */
+
+    /* .picture {
         height: 15em;
-    }
-   
-    .bottomSection {
+    } */
+
+    /* .bottomSection {
         display: flex;
         flex-direction: row-reverse;
-        margin-top: -5em;
-    }
+    } */
 }
