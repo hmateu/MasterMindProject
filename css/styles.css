@@ -277,6 +277,21 @@ a {
         height: 2.5em;
     }
 
+    .levelsBody{
+        margin-top: 2em;
+    }
+
+    .levelBtn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+        border-radius: .5em;
+        width: 15em;
+        font-size: 2em;
+        height: 4em;
+    }
+
     /* .bodyMasterMind,
     .bodyLevel {
         height: 88vh;
