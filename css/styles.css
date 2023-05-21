@@ -42,6 +42,10 @@ a {
     background-position: bottom center;
 }
 
+.hidden{
+    display: none;
+}
+
 /* Vista móvil */
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
