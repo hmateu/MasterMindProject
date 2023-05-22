@@ -223,6 +223,34 @@ a {
         flex-direction: row-reverse;
     }
 
+    .formLabel{
+        font-size: 2em;
+        margin-top: 2em;
+        margin-bottom: -.7em;
+    }
+
+    .inputName{
+        height: 1.6em;
+        width: 11.5em;
+        font-size: 1.4em;
+        border: .1em solid black;
+        border-radius: .4em;
+        display: flex;
+        text-align: center;
+    }
+
+    .lvlInputBtn{
+        font-size: 1.5em;
+        border: .1em solid black;
+        border-radius: .7em;
+        width: 5em;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1em;
+    }
+
     /* .bodyMasterMind,
     .bodyLevel {
         margin-top: .5em;
