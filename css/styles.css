@@ -150,6 +150,20 @@ a {
         justify-content: center;
     }
 
+    .easyDifficulty{
+        display: flex;
+        flex-direction: column;
+        row-gap: 3em;
+        margin-top: 3em;
+    }
+    .mediumDifficulty .inputColour{
+        display: flex;
+        column-gap: 7em;
+    }
+    .mediumDifficulty .selectColour{
+        display: flex;
+        column-gap: 7em;
+    }
     .hardDifficulty{
         display: flex;
         row-gap: 3em;
