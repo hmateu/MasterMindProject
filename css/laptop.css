@@ -1,0 +1,194 @@
+@media (min-width:1200px) {
+
+    .navBar {
+        margin-bottom: 2em;
+        /* background-color: lightcoral; */
+    }
+
+    .logo {
+        height: 18vh;
+    }
+
+    .masterMainBody,
+    .indexBody {
+        row-gap: 2em;
+        /* background-color: lightblue; */
+    }
+
+    .homeImg {
+        height: 15em;
+    }
+
+    .mainButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5em;
+    }
+
+    .secundaryBtns {
+        display: flex;
+        column-gap: 1em;
+    }
+
+    .mainBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        font-size: 1.2em;
+        height: 2em;
+        border-radius: .5em;
+    }
+
+    .playGame {
+        width: 15em;
+        font-size: 2em;
+        height: 2.5em;
+    }
+
+    .levelsBody {
+        margin-top: 0em;
+    }
+
+    .levelBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: .5em;
+        width: 15em;
+        font-size: 2em;
+        height: 3.7em;
+    }
+
+    .colourBody {
+        /* height: 80vh; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .easyDifficulty {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3em;
+        margin-top: 3em;
+    }
+
+    .mediumDifficulty .inputColour {
+        display: flex;
+        column-gap: 7em;
+    }
+
+    .mediumDifficulty .selectColour {
+        display: flex;
+        column-gap: 7em;
+    }
+
+    .hardDifficulty {
+        display: flex;
+        row-gap: 3em;
+        margin-top: 3em;
+    }
+
+    .inputColour {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.5em;
+    }
+
+    .colour {
+        height: 5em;
+        width: 5em;
+        border: .1em solid black;
+        border-radius: 50%;
+    }
+
+    .selectColour {
+        display: flex;
+        justify-content: space-around;
+        column-gap: 1.6em;
+    }
+
+    .inputColours {
+        display: flex;
+        padding: 0;
+        height: 3em;
+        width: 3em;
+        border-radius: .2em;
+        border: .1em solid black;
+    }
+
+    .sectionColours {
+        display: flex;
+        flex-direction: column;
+        row-gap: .5em;
+    }
+
+    .sectionTitle {
+        width: 90vw;
+        font-size: 1.2em;
+        border-bottom: .1em solid black;
+    }
+
+    .bodySection {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        row-gap: 1em;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        column-gap: 1em;
+    }
+
+    .bottomSection {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .formLabel {
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: -.7em;
+    }
+
+    .inputName {
+        height: 1.6em;
+        width: 11.5em;
+        font-size: 1.4em;
+        border: .1em solid black;
+        border-radius: .4em;
+        display: flex;
+        text-align: center;
+    }
+
+    .lvlInputBtn {
+        font-size: 1.5em;
+        border: .1em solid black;
+        border-radius: .7em;
+        width: 5em;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0em;
+    }
+
+    .messageUser {
+        font-size: 1.7em;
+        background-color: rgb(205, 38, 38);
+        border-radius: .5em;
+        border: .2em solid rgb(86, 0, 0);
+        color: white;
+        height: 3.5em;
+        width: 11em;
+        margin-top: 3em;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+}

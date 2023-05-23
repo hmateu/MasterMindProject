@@ -1,0 +1,133 @@
+@media (min-width:1801px) {
+
+    .navBar {
+        margin-bottom: 2em;
+        /* background-color: lightcoral; */
+    }
+
+    .logo {
+        height: 18vh;
+    }
+
+    .masterMainBody,
+    .indexBody {
+        row-gap: 5em;
+        /* background-color: lightblue; */
+    }
+
+    .homeImg {
+        height: 25em;
+    }
+
+    .mainButtons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.5em;
+    }
+
+    .secundaryBtns {
+        display: flex;
+        column-gap: 1em;
+    }
+
+    .mainBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12em;
+        font-size: 1.2em;
+        height: 2em;
+        background-color: antiquewhite;
+        border-radius: .5em;
+    }
+
+    .playGame {
+        width: 15em;
+        font-size: 2em;
+        height: 2.5em;
+    }
+
+    .levelsBody {
+        margin-top: 2em;
+    }
+
+    .levelBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+        border-radius: .5em;
+        width: 15em;
+        font-size: 2em;
+        height: 4em;
+    }
+
+    /* .bodyMasterMind,
+    .bodyLevel {
+        height: 88vh;
+        row-gap: 10em;
+    } */
+
+    /* .bodyLevel {
+        row-gap: 1em;
+        margin-top: 2em;
+    } */
+
+    /* .btnsMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1em;
+        width: 100%;
+    } */
+
+    /* .btnMain {
+        width: 120%;
+        height: 1.5em;
+        font-size: 2em;
+    } */
+
+    /* .levelBtn {
+        width: 20em;
+        height: 5em;
+        font-size: 1.5em;
+    } */
+
+    /* .sectionTitle {
+        width: 90vw;
+        font-size: 2em;
+        border-bottom: .1em solid black;
+    } */
+
+    /* .bodySection {
+        border: 0.2em solid black;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    } */
+
+    /* .section {
+        display: flex;
+        align-items: center;
+        column-gap: 2em;
+    } */
+
+    /* .sectionText {
+        font-size: 1.3em;
+    } */
+
+    /* .picture {
+        height: 15em;
+    } */
+
+    /* .bottomSection {
+        display: flex;
+        flex-direction: row-reverse;
+    } */
+}
+
+.hidden {
+    display: none;
+}
