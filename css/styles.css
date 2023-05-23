@@ -92,6 +92,10 @@ a {
     background-color: red;
 }
 
+.lvlInputBtn{
+    cursor: pointer;
+}
+
 /* Vista móvil */
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
