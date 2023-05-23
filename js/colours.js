@@ -1,17 +1,16 @@
 let difficulty = window.sessionStorage.getItem("difficulty");
-if(difficulty == "easyLvl"){
+if(difficulty == "easy"){
     document.getElementById("easy").classList.remove("hidden");
-    window.sessionStorage.setItem("difficulty",difficulty);
-} else if(difficulty == "mediumLvl"){
+} else if(difficulty == "medium"){
     document.getElementById("medium").classList.remove("hidden");
-    window.sessionStorage.setItem("difficulty",difficulty);
 } else{
     document.getElementById("hard").classList.remove("hidden");
-    window.sessionStorage.setItem("difficulty",difficulty);
 }
 
-const colorPickers = document.querySelectorAll("#easy .inputColours");
-const colorBall = document.querySelectorAll("#easy .colour");
+
+//Color Picker
+const colorPickers = document.querySelectorAll(`#${difficulty} .inputColours`);
+const colorBall = document.querySelectorAll(`#${difficulty} .colour`);
 colorPickers.forEach((picker, i) => {
     picker.addEventListener("input", (e) => {
         const color = e.target.value;
