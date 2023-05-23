@@ -207,13 +207,15 @@ a {
     }
 
     .mediumDifficulty .selectColour {
-        /* display: flex; */
         column-gap: 2em;
+    }
+    .hardDifficulty .selectColour {
+        column-gap: 1em;
     }
 
     .hardDifficulty {
         display: flex;
-        row-gap: 3em;
+        row-gap: 1em;
         margin-top: 3em;
     }
 
