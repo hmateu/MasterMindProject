@@ -17,3 +17,10 @@ colorPickers.forEach((picker, i) => {
         colorBall[i].style.background = color;
     })
 })
+
+//Guardar colores
+document.getElementById("playBtn").addEventListener("click",() => {
+    const arrayColorPickers = Array.from(colorPickers);
+    const gameColours = arrayColorPickers.map(element => element.value);
+    sessionStorage.setItem("colours",JSON.stringify(gameColours));  
+})
