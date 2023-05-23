@@ -7,20 +7,6 @@ body {
     margin: 0;
     padding: 0;
 }
-.selectColour .inputColours{
-    background-color: transparent;
-    border: none;
-    appearance: none;
-}
-.selectColour .inputColours::-webkit-color-swatch{
-    border-radius: 50%;
-    appearance: none;
-    border: none;
-}
-.inputColours::-moz-color-swatch{
-    border: none;
-}
-
 
 a {
     text-decoration: none;
@@ -107,6 +93,24 @@ a {
 
 .hardLevel {
     background-color: red;
+}
+
+.selectColour .inputColours{
+    background-color: transparent;
+    border: none;
+    appearance: none;
+}
+.selectColour .inputColours::-webkit-color-swatch{
+    border-radius: 50%;
+    appearance: none;
+    border: none;
+}
+.inputColours::-moz-color-swatch{
+    border: none;
+}
+
+.playBtn{
+    background-color: rgb(247, 87, 87);
 }
 
 .lvlInputBtn {
@@ -236,7 +240,7 @@ a {
         height: 3em;
         width: 3em;
         border-radius: .2em;
-        border: .1em solid black;
+        /* border: .1em solid black; */
     }
 
     .sectionColours {
@@ -313,9 +317,13 @@ a {
     }
 
     .playBtn{
-        height: 2em;
-        width: 5em;
-        background-color: firebrick;
+        font-size: 2em;
+        height: 3em;
+        width: 6em;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: .5em;
     }
 
     /* .bodyMasterMind,
