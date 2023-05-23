@@ -1,7 +1,10 @@
+let userInput = document.getElementById("name");
+const username = sessionStorage.getItem("user");
+if(username) userInput.value = username;
+
 const sendUser = () => {
-    let user = document.getElementById("name").value;
-    if(user != "" && user != null){
-        window.sessionStorage.setItem("user",user);
+    if(userInput.value != "" && userInput.value != null){
+        window.sessionStorage.setItem("user",userInput.value);
         document.getElementById("userForm").classList.add("hidden");
         document.getElementById("showLevels").classList.remove("hidden");
         document.getElementById("errorMessage").classList.add("hidden");
