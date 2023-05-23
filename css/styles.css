@@ -82,6 +82,16 @@ a {
     border: .1em solid black;
 }
 
+.easyLevel{
+    background-color: green;
+}
+.mediumLevel{
+    background-color: rgb(255, 174, 0);
+}
+.hardLevel{
+    background-color: red;
+}
+
 /* Vista móvil */
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
@@ -320,7 +330,7 @@ a {
 
     .masterMainBody,
     .indexBody {
-        row-gap: 3em;
+        row-gap: 2em;
         /* background-color: lightblue; */
     }
 
@@ -355,18 +365,18 @@ a {
         height: 2.5em;
     }
 
+    .levelsBody{
+        margin-top: 0em;
+    }
     .levelBtn{
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: antiquewhite;
         border-radius: .5em;
         width: 15em;
         font-size: 2em;
-        height: 4em;
+        height: 3.7em;
     }
-
-
 
     .colourBody{
         /* height: 80vh; */
@@ -488,9 +498,6 @@ a {
         align-items: center;
         text-align: center;
     }
-
-
-
 
 }
 /* Vista ordenador */
