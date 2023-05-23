@@ -6,6 +6,10 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
+    background: url("../img/wallpaper.jpg") no-repeat;
+    background-size: cover;
+    background-position-x: center;
 }
 
 a {
@@ -142,7 +146,8 @@ a {
     }
 
     .homeImg {
-        height: 12em;
+        margin-top: 2em;
+        height: 9em;
     }
 
     .mainButtons {
@@ -162,9 +167,10 @@ a {
     }
 
     .playGame {
-        width: 8em;
+        width: 7em;
         font-size: 2em;
-        height: 3em;
+        height: 2.5em;
+        margin-top: .5em;
     }
 
     .secundaryBtns {

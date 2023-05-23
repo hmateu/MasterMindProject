@@ -1,5 +1,5 @@
 @media (min-width:1801px) {
-
+    
     .navBar {
         margin-bottom: 2em;
         /* background-color: lightcoral; */
@@ -16,7 +16,7 @@
     }
 
     .homeImg {
-        height: 25em;
+        height: 15em;
     }
 
     .mainButtons {
