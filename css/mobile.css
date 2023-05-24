@@ -410,23 +410,24 @@ a {
     /*Diseño del tablero*/
     .board {
         display: grid;
-        grid-template-columns: repeat(5, 3em);
+        grid-template-columns: repeat(5, 2em);
         /*Separación entre los cuadrados grandes*/
-        gap: .5em;
+        gap: .3em;
         /*Separación entre cada fila*/
         margin-top: .5em;
+        width: 13.5em;
     }
     
     .bigCircle,
-    /*Donde van las validaciones*/
-    .circles,
     .smallCircles {
         border: .1em solid white;
     }
     
-    .bigCircle,
+    .bigCircle{
+        height: 2em;
+    }
     .circles {
-        height: 3em;
+        width: 5em;
     }
     
     /*Casillas donde van los colores en el tablero*/
@@ -439,13 +440,12 @@ a {
     .circles {
         display: flex;
         align-items: center;
-        column-gap: .5em;
-        margin-left: 1em;
+        column-gap: .1em;
     }
     
     .smallCircles {
-        height: 2em;
-        width: 2em;
+        height: 1em;
+        width: 1em;
     }
 
 }
