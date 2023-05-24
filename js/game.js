@@ -36,7 +36,7 @@ winnerChoice.map((element, i) => {
         console.log("NO MATCH");
         for (let j = 0; j < winnerChoice.length; j++) {
             console.log(`Comparo ${element} de winnerChoice con posición ${j} del currentChoice, que es ${currentChoice[j]}`);
-            if(element == currentChoice[j]){
+            if (element == currentChoice[j]) {
                 console.log(`Element (${element}) es igual a posición ${j} del currentChoice ${currentChoice[j]}`);
                 unSuccessBall++;
             }
@@ -73,8 +73,8 @@ if (successBall == 4) {
 let availableColours = JSON.parse(sessionStorage.getItem("colours"));
 let randomNumber = [];
 const calculateRandom = () => {
-    for(let i = 0; i < 4; i++){
-        randomNumber.push(Math.floor(Math.random()*availableColours.length));
+    for (let i = 0; i < 4; i++) {
+        randomNumber.push(Math.floor(Math.random() * availableColours.length));
     }
     return randomNumber;
 }
@@ -82,38 +82,38 @@ const calculateRandom = () => {
 const paintWinner = () => {
     let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
-    availableColours.forEach((element,i) => {
+    availableColours.forEach((element, i) => {
         // arrWinnerSquareColours[i].style.background = "#ff0000";
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
         // arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()];
     });
 }
 
-paintWinner();
+//-------------------- paintWinner();
 
 const paintAvailable = () => {
     // let availableColours = JSON.parse(sessionStorage.getItem("colours"));
-    
+
     let availableSquareColours = document.querySelectorAll(".availableChoiceArr .colorSquare");
     let arrAvailableSquareColours = Array.from(availableSquareColours);
-    availableColours.forEach((element,i) => {
+    availableColours.forEach((element, i) => {
         arrAvailableSquareColours[i].style.background = element;
     });
-    
+
     // console.log(available);
 }
-paintAvailable();
+//-------------- paintAvailable();
 
-let nRows;
+
 const createBoard = (nRows) => {
     let board = document.getElementById("board");
     let bigCircle;
     let circles;
-    for(let i = 1; i <= nRows; i++){
+    for (let i = 1; i <= nRows; i++) {
         newRow = document.createElement("div");
         newRow.className = "board";
-        for(let j = 0; j < 5; j++){
-            if(j < 4) {
+        for (let j = 0; j < 5; j++) {
+            if (j < 4) {
                 bigCircle = document.createElement("div");
                 bigCircle.className = "bigCircle";
                 newRow.appendChild(bigCircle);
@@ -121,7 +121,7 @@ const createBoard = (nRows) => {
                 circles = document.createElement("div");
                 circles.className = "circles";
                 newRow.appendChild(circles);
-                for(let k = 0; k < 4; k++){
+                for (let k = 0; k < 4; k++) {
                     smallCircles = document.createElement("div");
                     smallCircles.className = "smallCircles";
                     circles.appendChild(smallCircles);
@@ -131,4 +131,17 @@ const createBoard = (nRows) => {
         board.appendChild(newRow);
     }
 }
-createBoard(10);
+let nRows = sessionStorage.getItem("difficulty");
+switch (nRows) {
+    case "easy":
+        nRows = 10;
+        break;
+    case "medium":
+        nRows = 8;
+        break;
+
+    default:
+        nRows = 6;
+        break;
+}
+createBoard(nRows);
