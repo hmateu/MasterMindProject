@@ -22,5 +22,6 @@ colorPickers.forEach((picker, i) => {
 document.getElementById("playBtn").addEventListener("click",() => {
     const arrayColorPickers = Array.from(colorPickers);
     const gameColours = arrayColorPickers.map(element => element.value);
-    sessionStorage.setItem("colours",JSON.stringify(gameColours));  
+    sessionStorage.setItem("colours",JSON.stringify(gameColours));
+    window.location.href="./game.html";
 })
