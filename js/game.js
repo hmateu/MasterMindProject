@@ -72,3 +72,15 @@ if (successBall == 4) {
 
 
 
+let board = document.getElementById("board");
+
+const createBoard = (nRows) => {
+    for(let i = 1; i <= nRows; i++){
+        newRow = document.createElement("div");
+        newRow.className = "dashboard";
+        newRow.id = `row${i}`;
+        console.log(newRow.id);
+    }
+    board.appendChild(newRow);
+}
+createBoard(3);
