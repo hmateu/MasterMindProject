@@ -73,6 +73,7 @@ if (successBall == 4) {
 
 
 let board = document.getElementById("board");
+let nRows;
 let bigCircle;
 let circles;
 
@@ -96,7 +97,7 @@ const createBoard = (nRows) => {
                 }
             }
         }
+        board.appendChild(newRow);
     }
-    board.appendChild(newRow);
 }
-createBoard(3);
+createBoard(5);
