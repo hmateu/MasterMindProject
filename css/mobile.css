@@ -124,12 +124,16 @@ a {
 }
 
 .playGame {
-    background-color: rgb(247, 87, 87);
+    background-color: rgb(255, 0, 191);
+    color: white;
+    border: .01em solid white;
 }
 
 .howToPlay,
 .developer {
-    background-color: rgb(135, 135, 245);
+    background-color: rgb(24, 117, 82);
+    color: white;
+    border: .01em solid white;
 }
 
 /* Vista móvil */
