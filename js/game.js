@@ -78,7 +78,8 @@ const calculateRandom = () => {
     }
     return randomNumber;
 }
-// console.log(`******* ${calculateRandom()} *********`)
+console.log(`******* La secuencia de números ${calculateRandom()} *********`)
+console.log(`Los colores elegidos estan en availableColours, son ${availableColours} y son ${availableColours.length}`)
 const paintWinner = () => {
     let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
@@ -89,7 +90,7 @@ const paintWinner = () => {
     });
 }
 
-//-------------------- paintWinner();
+
 
 const paintAvailable = () => {
     // let availableColours = JSON.parse(sessionStorage.getItem("colours"));
@@ -102,7 +103,6 @@ const paintAvailable = () => {
 
     // console.log(available);
 }
-//-------------- paintAvailable();
 
 
 const createBoard = (nRows) => {
@@ -145,3 +145,7 @@ switch (nRows) {
         break;
 }
 createBoard(nRows);
+
+paintWinner();
+
+paintAvailable();
