@@ -407,4 +407,45 @@ a {
 
     /* .hardLevel {} */
 
+    /*Diseño del tablero*/
+    .board {
+        display: grid;
+        grid-template-columns: repeat(5, 3em);
+        /*Separación entre los cuadrados grandes*/
+        gap: .5em;
+        /*Separación entre cada fila*/
+        margin-top: .5em;
+    }
+    
+    .bigCircle,
+    /*Donde van las validaciones*/
+    .circles,
+    .smallCircles {
+        border: .1em solid white;
+    }
+    
+    .bigCircle,
+    .circles {
+        height: 3em;
+    }
+    
+    /*Casillas donde van los colores en el tablero*/
+    .bigCircle,
+    .smallCircles {
+        border-radius: 50%;
+    }
+    
+    /*Donde van las 4 casillas de verificación*/
+    .circles {
+        display: flex;
+        align-items: center;
+        column-gap: .5em;
+        margin-left: 1em;
+    }
+    
+    .smallCircles {
+        height: 2em;
+        width: 2em;
+    }
+
 }

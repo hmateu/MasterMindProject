@@ -73,13 +73,24 @@ if (successBall == 4) {
 
 
 let board = document.getElementById("board");
+let bigCircle;
+let circles;
 
 const createBoard = (nRows) => {
     for(let i = 1; i <= nRows; i++){
         newRow = document.createElement("div");
-        newRow.className = "dashboard";
-        newRow.id = `row${i}`;
-        console.log(newRow.id);
+        newRow.className = "board";
+        for(let j = 0; j < 5; j++){
+            if(j < 4) {
+                bigCircle = document.createElement("div");
+                bigCircle.className = "bigCircle";
+                newRow.appendChild(bigCircle);
+            } else {
+                circles = document.createElement("div");
+                circles.className = "circles";
+                newRow.appendChild(circles);
+            }
+        }
     }
     board.appendChild(newRow);
 }
