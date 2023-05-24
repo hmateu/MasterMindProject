@@ -83,14 +83,16 @@ const paintWinner = () => {
     let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
     availableColours.forEach((element,i) => {
-        arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()];
+        // arrWinnerSquareColours[i].style.background = "#ff0000";
+        arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
+        // arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()];
     });
 }
 
 paintWinner();
 
 const paintAvailable = () => {
-    let availableColours = JSON.parse(sessionStorage.getItem("colours"));
+    // let availableColours = JSON.parse(sessionStorage.getItem("colours"));
     
     let availableSquareColours = document.querySelectorAll(".availableChoiceArr .colorSquare");
     let arrAvailableSquareColours = Array.from(availableSquareColours);
