@@ -1,6 +1,6 @@
 let userInput = document.getElementById("name");
 const username = sessionStorage.getItem("user");
-if(username) userInput.value = username;
+// if(username) userInput.value = username;
 
 const sendUser = () => {
     if(userInput.value != "" && userInput.value != null){

@@ -69,15 +69,24 @@ if (successBall == 4) {
 //Averigua cuantas bolas hay en la winnerChoice, aunque no esten en el lugar correcto
 
 
+const paintAvailable = () => {
+    let availableColours = JSON.parse(sessionStorage.getItem("colours"));
+    
+    let availableSquareColours = document.querySelectorAll(".availableChoiceArr .colorSquare");
+    let arrAvailableSquareColours = Array.from(availableSquareColours);
+    availableColours.forEach((element,i) => {
+        arrAvailableSquareColours[i].style.background = element;
+    });
+    
+    // console.log(available);
+}
+paintAvailable();
 
-
-
-let board = document.getElementById("board");
 let nRows;
-let bigCircle;
-let circles;
-
 const createBoard = (nRows) => {
+    let board = document.getElementById("board");
+    let bigCircle;
+    let circles;
     for(let i = 1; i <= nRows; i++){
         newRow = document.createElement("div");
         newRow.className = "board";
@@ -100,4 +109,4 @@ const createBoard = (nRows) => {
         board.appendChild(newRow);
     }
 }
-createBoard(5);
+createBoard(10);
