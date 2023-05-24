@@ -89,6 +89,11 @@ const createBoard = (nRows) => {
                 circles = document.createElement("div");
                 circles.className = "circles";
                 newRow.appendChild(circles);
+                for(let k = 0; k < 4; k++){
+                    smallCircles = document.createElement("div");
+                    smallCircles.className = "smallCircles";
+                    circles.appendChild(smallCircles);
+                }
             }
         }
     }
