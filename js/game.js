@@ -68,6 +68,26 @@ if (successBall == 4) {
 
 //Averigua cuantas bolas hay en la winnerChoice, aunque no esten en el lugar correcto
 
+//Calcula los índices donde guardará los colores
+
+let availableColours = JSON.parse(sessionStorage.getItem("colours"));
+let randomNumber = [];
+const calculateRandom = () => {
+    for(let i = 0; i < 4; i++){
+        randomNumber.push(Math.floor(Math.random()*availableColours.length));
+    }
+    return randomNumber;
+}
+// console.log(`******* ${calculateRandom()} *********`)
+const paintWinner = () => {
+    let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
+    let arrWinnerSquareColours = Array.from(winnerSquareColours);
+    availableColours.forEach((element,i) => {
+        arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()];
+    });
+}
+
+paintWinner();
 
 const paintAvailable = () => {
     let availableColours = JSON.parse(sessionStorage.getItem("colours"));
