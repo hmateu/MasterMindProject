@@ -68,12 +68,17 @@ if (successBall == 4) {
 
 //Averigua cuantas bolas hay en la winnerChoice, aunque no esten en el lugar correcto
 
-//Calcula los índices donde guardará los colores
 
+
+
+
+
+
+
+//Calcula los índices donde guardará los colores
 let availableColours = JSON.parse(sessionStorage.getItem("colours"));
-let randomNumber = [];
-let randomArr = [];
 const calculateRandom = () => {
+    let randomNumber = [];
     for (let i = 0; i < 4; i++) {
         randomNumber.push(Math.floor(Math.random() * availableColours.length));
     }

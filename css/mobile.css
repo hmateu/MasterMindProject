@@ -164,9 +164,9 @@ a {
 }
 .showColours{
     display: flex;
+    column-gap: .5em;
 }
 .colorSquare{
-    border: .1em solid wheat; /*Eliminar para que no se vea en la página de juego*/
     height: 2em;
     width: 2em;
 }
