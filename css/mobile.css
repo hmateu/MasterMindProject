@@ -41,6 +41,15 @@ a {
     display: flex;
     text-align: center;
 }
+
+.messageUser {
+    background-color: rgb(205, 38, 38);
+    border: .2em solid rgb(86, 0, 0);
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 .lvlInputBtn{
     background-color: rgb(24, 117, 82);
     color: white;
@@ -54,6 +63,7 @@ a {
 .lvlInputBtn:hover {
     background-color: rgb(31, 83, 63);
 }
+
 /* .bodyMasterMind,
 .bodyLevel {
     display: flex;
@@ -360,18 +370,11 @@ a {
 
     .messageUser {
         font-size: 1.7em;
-        background-color: rgb(205, 38, 38);
         border-radius: .5em;
-        border: .2em solid rgb(86, 0, 0);
-        color: white;
         height: 3.5em;
         width: 11em;
         margin-top: .1em;
-        display: flex;
-        align-items: center;
-        text-align: center;
     }
-
     .playBtn{
         font-size: 1.5em;
         height: 3em;
