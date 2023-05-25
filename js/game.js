@@ -125,31 +125,19 @@ const createBoard = (nRows) => {
     let board = document.getElementById("board");
     let bigCircle;
     let circles;
-    //Id de las celdas donde van los colores en el tablero
-    // let idColours=1;
-    //Id de las celdas donde van las pistas
-    // let idValidate=1;
     for (let i = 0; i < nRows; i++) {
         newRow = document.createElement("div");
         newRow.className = "board";
         newRow.id = i;
-
-        //Selecciono una fila del tablero
-        // if (newRow.id == 6) {
-        //     newRow.style.background = "red";
-        // }
-
+        //Selecciono una fila del tablero ------------------------------------------------------------
+        // if (newRow.id == 6) newRow.style.background = "red";
         for (let j = 0; j < 5; j++) {
             if (j < 4) {
                 bigCircle = document.createElement("div");
                 bigCircle.className = "bigCircle";
                 bigCircle.id = j;
-
-                //Selecciono una celda color del tablero
-                // if (bigCircle.id == 3) {
-                //     bigCircle.style.background = "blue"
-                // }
-
+                //Selecciono una celda color del tablero ---------------------------------------------
+                // if (bigCircle.id == 3) bigCircle.style.background = "blue";
                 // idColours++;
                 newRow.appendChild(bigCircle);
             } else {
@@ -160,26 +148,26 @@ const createBoard = (nRows) => {
                     smallCircles = document.createElement("div");
                     smallCircles.className = "smallCircles";
                     smallCircles.id = k;
-
+                    //Selecciono una celda pista del tablero ---------------------------------------------
+                    // if (smallCircles.id == 0) smallCircles.style.background = "lime"
                     //Selecciono una fila del tablero
-                    if (newRow.id == 7) {
-                        //Selecciono una celda color del tablero
-                        if (bigCircle.id == 3) {
-                            //Selecciono una chincheta del tablero
-                            if (smallCircles.id == 3) {
-                                newRow.style.background = "red";
-                                bigCircle.style.background = "blue"
-                                smallCircles.style.background = "lime"
-                            }
-                        }
-                    }
+                    // if (newRow.id == 7) {
+                    //     //Selecciono una celda color del tablero
+                    //     if (bigCircle.id == 3) {
+                    //         //Selecciono una chincheta del tablero
+                    //         if (smallCircles.id == 3) {
+                    //             newRow.style.background = "red";
+                    //             bigCircle.style.background = "blue"
+                    //             smallCircles.style.background = "lime"
+                    //         }
+                    //     }
+                    // }
 
                     // idValidate++;
                     circles.appendChild(smallCircles);
                 }
             }
-        }
-        board.appendChild(newRow);
+        } board.appendChild(newRow);
     }
 }
 
