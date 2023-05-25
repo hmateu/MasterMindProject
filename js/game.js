@@ -85,11 +85,9 @@ const paintWinner = () => {
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
     availableColours.forEach((element, i) => {
         // arrWinnerSquareColours[i].style.background = "#ff0000";
-        arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
-        // arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()];
+        // arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
     });
 }
-
 
 
 const paintAvailable = () => {
@@ -97,12 +95,14 @@ const paintAvailable = () => {
 
     let availableSquareColours = document.querySelectorAll(".availableChoiceArr .colorSquare");
     let arrAvailableSquareColours = Array.from(availableSquareColours);
+    console.log(arrAvailableSquareColours)
     availableColours.forEach((element, i) => {
-        arrAvailableSquareColours[i].style.background = element;
+        arrAvailableSquareColours[i].style.background = availableColours[i];
     });
 
     // console.log(available);
 }
+
 
 
 const createBoard = (nRows) => {
