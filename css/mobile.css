@@ -159,6 +159,13 @@ a {
 .developer:hover {
     background-color: rgb(31, 83, 63);
 }
+.gameBody{
+    display: flex;
+    justify-content: center;
+}
+.availableColour{
+    margin-left: -2.65em;
+}
 .titleArrColours{
     color: white;
 }
@@ -418,6 +425,9 @@ a {
     /* .hardLevel {} */
 
     /*Diseño del tablero*/
+    .gameBoard{
+        width: 13.5em;
+    }
     .board {
         display: grid;
         grid-template-columns: repeat(5, 2em);
