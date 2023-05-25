@@ -1,5 +1,8 @@
 * {
     box-sizing: border-box;
+    color: white;
+}
+input{
     color: black;
 }
 
@@ -32,9 +35,9 @@ a {
     flex-direction: column;
     align-items: center;
 }
-.formLabel{
+/* .formLabel{
     color: white;
-}
+} */
 .inputName {
     border: .1em solid white;
     border-radius: .4em;
@@ -45,14 +48,14 @@ a {
 .messageUser {
     background-color: rgb(205, 38, 38);
     border: .2em solid rgb(86, 0, 0);
-    color: white;
+    /* color: white; */
     display: flex;
     align-items: center;
     text-align: center;
 }
 .lvlInputBtn{
     background-color: rgb(24, 117, 82);
-    color: white;
+    /* color: white; */
     border-radius: .7em;
     display: flex;
     justify-content: center;
@@ -67,7 +70,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    /* color: white; */
 }
 
 .easyLevel {
@@ -158,7 +161,7 @@ a {
 
 .playGame {
     background-color: rgb(255, 0, 191);
-    color: white;
+    /* color: white; */
     border: .01em solid white;
 }
 .playGame:hover {
@@ -168,7 +171,7 @@ a {
 .howToPlay,
 .developer {
     background-color: rgb(24, 117, 82);
-    color: white;
+    /* color: white; */
     border: .01em solid white;
 }
 .howToPlay:hover,
@@ -182,9 +185,9 @@ a {
 .availableColour{
     margin-left: -2.65em;
 }
-.titleArrColours{
+/* .titleArrColours{
     color: white;
-}
+} */
 .showColours{
     display: flex;
     column-gap: .5em;

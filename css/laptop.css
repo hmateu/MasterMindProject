@@ -173,7 +173,7 @@
         background-color: rgb(205, 38, 38);
         border-radius: .5em;
         border: .2em solid rgb(86, 0, 0);
-        color: white;
+        /* color: white; */
         height: 3.5em;
         width: 11em;
         margin-top: 3em;
