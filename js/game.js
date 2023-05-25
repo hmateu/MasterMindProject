@@ -84,14 +84,14 @@ const calculateRandom = () => {
     }
     return randomNumber;
 }
-    // console.log(`******* La secuencia de números ${calculateRandom()} *********`)
-    // console.log(`Los colores elegidos estan en availableColours, son ${availableColours} y son ${availableColours.length}`)
+// console.log(`******* La secuencia de números ${calculateRandom()} *********`)
+// console.log(`Los colores elegidos estan en availableColours, son ${availableColours} y son ${availableColours.length}`)
 const paintWinner = () => {
     // let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
     // let arrWinnerSquareColours = Array.from(winnerSquareColours);
     let winnerSquareColours = document.getElementsByClassName("winnerChoiseClass");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
-   
+
     console.log(`Números aleatorios = ${calculateRandom()}`)
     availableColours.forEach((element, i) => {
         console.log(`Elemento de availableColours ${element}`);
@@ -124,18 +124,18 @@ const createBoard = (nRows) => {
     let bigCircle;
     let circles;
     //Id de las celdas donde van los colores en el tablero
-    let idColours=1;
+    // let idColours=1;
     //Id de las celdas donde van las pistas
-    let idValidate=1;
-    for (let i = 1; i <= nRows; i++) {
+    // let idValidate=1;
+    for (let i = 0; i < nRows; i++) {
         newRow = document.createElement("div");
         newRow.className = "board";
         newRow.id = i;
 
         //Selecciono una fila del tablero
-        if(newRow.id == 6){
-            newRow.style.background = "red";
-        }
+        // if (newRow.id == 6) {
+        //     newRow.style.background = "red";
+        // }
 
         for (let j = 0; j < 5; j++) {
             if (j < 4) {
@@ -144,11 +144,11 @@ const createBoard = (nRows) => {
                 bigCircle.id = j;
 
                 //Selecciono una celda color del tablero
-                if(bigCircle.id == 3){
-                    bigCircle.style.background = "blue"
-                }
+                // if (bigCircle.id == 3) {
+                //     bigCircle.style.background = "blue"
+                // }
 
-                idColours++;
+                // idColours++;
                 newRow.appendChild(bigCircle);
             } else {
                 circles = document.createElement("div");
@@ -159,12 +159,20 @@ const createBoard = (nRows) => {
                     smallCircles.className = "smallCircles";
                     smallCircles.id = k;
 
-                    //Selecciono una chincheta del tablero
-                    if(smallCircles.id == 1){
-                        smallCircles.style.background = "lime"
+                    //Selecciono una fila del tablero
+                    if (newRow.id == 0) {
+                        //Selecciono una celda color del tablero
+                        if (bigCircle.id == 3) {
+                            //Selecciono una chincheta del tablero
+                            if (smallCircles.id == 3) {
+                                newRow.style.background = "red";
+                                bigCircle.style.background = "blue"
+                                smallCircles.style.background = "lime"
+                            }
+                        }
                     }
 
-                    idValidate++;
+                    // idValidate++;
                     circles.appendChild(smallCircles);
                 }
             }
@@ -172,6 +180,7 @@ const createBoard = (nRows) => {
         board.appendChild(newRow);
     }
 }
+
 let nRows = sessionStorage.getItem("difficulty");
 switch (nRows) {
     case "easy":
