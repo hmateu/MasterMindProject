@@ -96,6 +96,7 @@ const paintWinner = () => {
     availableColours.forEach((element, i) => {
         console.log(`Elemento de availableColours ${element}`);
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
+        arrWinnerSquareColours[i].style.border = ".15em solid white";
         // arrWinnerSquareColours[i].style.background = availableColours[0]; //-------------------No cojo el color random
         // arrWinnerSquareColours[i].style.backgroundColor = "#ff0000";
         // arrWinnerSquareColours[i].style.background = element[calculateRandom()];
@@ -112,6 +113,7 @@ const paintAvailable = () => {
     // console.log(arrAvailableSquareColours)
     availableColours.forEach((element, i) => {
         arrAvailableSquareColours[i].style.background = availableColours[i];
+        arrAvailableSquareColours[i].style.border = ".15em solid white";
     });
 
     // console.log(available);
@@ -160,7 +162,7 @@ const createBoard = (nRows) => {
                     smallCircles.id = k;
 
                     //Selecciono una fila del tablero
-                    if (newRow.id == 0) {
+                    if (newRow.id == 7) {
                         //Selecciono una celda color del tablero
                         if (bigCircle.id == 3) {
                             //Selecciono una chincheta del tablero

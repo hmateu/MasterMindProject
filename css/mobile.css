@@ -2,14 +2,14 @@
     box-sizing: border-box;
     color: white;
 }
-input{
+
+input {
     color: black;
 }
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     background: url("../img/wallpaper.jpg") no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -35,6 +35,7 @@ a {
     flex-direction: column;
     align-items: center;
 }
+
 /* .formLabel{
     color: white;
 } */
@@ -55,7 +56,8 @@ a {
     align-items: center;
     text-align: center;
 }
-.lvlInputBtn{
+
+.lvlInputBtn {
     background-color: rgb(24, 117, 82);
     /* color: white; */
     border-radius: .7em;
@@ -65,9 +67,11 @@ a {
     border: .01em solid white;
     cursor: pointer;
 }
+
 .lvlInputBtn:hover {
     background-color: rgb(31, 83, 63);
 }
+
 .levelBtn {
     display: flex;
     justify-content: center;
@@ -78,6 +82,7 @@ a {
 .easyLevel {
     background-color: rgb(24, 117, 82);
 }
+
 .easyLevel:hover {
     background-color: rgb(31, 83, 63);
 }
@@ -85,6 +90,7 @@ a {
 .mediumLevel {
     background-color: rgb(255, 174, 0);
 }
+
 .mediumLevel:hover {
     background-color: rgb(167, 122, 27);
 }
@@ -92,6 +98,7 @@ a {
 .hardLevel {
     background-color: rgb(255, 0, 191);
 }
+
 .hardLevel:hover {
     background-color: rgb(168, 30, 134);
 }
@@ -151,26 +158,29 @@ a {
 } */
 
 
-.selectColour .inputColours{
+.selectColour .inputColours {
     background-color: transparent;
     height: 6em;
     width: 6em;
     border: none;
     appearance: none;
 }
-.selectColour .inputColours::-webkit-color-swatch{
+
+.selectColour .inputColours::-webkit-color-swatch {
     border-radius: 50%;
     appearance: none;
     border: none;
 }
-.inputColours::-moz-color-swatch{
+
+.inputColours::-moz-color-swatch {
     border: none;
 }
 
-.playBtn{
+.playBtn {
     background-color: rgb(255, 0, 191);
     cursor: pointer;
 }
+
 .playBtn:hover {
     background-color: rgb(168, 30, 134);
 }
@@ -180,40 +190,55 @@ a {
     /* color: white; */
     border: .01em solid white;
 }
+
 .playGame:hover {
     background-color: rgb(168, 30, 134);
 }
+
 .sectionTitle {
     border-bottom: .1em solid white;
 }
+
 .howToPlay,
 .developer {
     background-color: rgb(24, 117, 82);
     /* color: white; */
     border: .01em solid white;
 }
+
 .howToPlay:hover,
 .developer:hover {
     background-color: rgb(31, 83, 63);
 }
-.gameBody{
+
+.gameBody {
     display: flex;
     justify-content: center;
 }
-.availableColour{
+
+.availableColour {
     margin-left: -2.65em;
 }
+
 /* .titleArrColours{
     color: white;
 } */
-.showColours{
+.showColours {
     display: flex;
     column-gap: .5em;
 }
-.colorSquare{
+
+.colorSquare {
     height: 2em;
     width: 2em;
+    border-radius: .5em;
 }
+
+.bigCircle,
+.smallCircles {
+    background-color: rgb(197, 197, 197);
+}
+
 /* Vista móvil */
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
@@ -265,6 +290,7 @@ a {
     .levelsBody {
         margin-top: 2em;
     }
+
     .levelBtn {
         border-radius: .5em;
         width: 8em;
@@ -272,7 +298,7 @@ a {
         height: 3em;
     }
 
-    .coloursTitle{
+    .coloursTitle {
         font-size: 1.5em;
         width: 10em;
         align-items: center;
@@ -303,6 +329,7 @@ a {
     .mediumDifficulty .selectColour {
         column-gap: 2em;
     }
+
     .hardDifficulty .selectColour {
         column-gap: 1em;
     }
@@ -310,7 +337,7 @@ a {
     .hardDifficulty {
         display: flex;
         row-gap: 1em;
-        margin-top: 3em;
+        margin-top: 2em;
     }
 
     .inputColour {
@@ -347,7 +374,7 @@ a {
         row-gap: .5em;
     }
 
-    
+
     .sectionTitle {
         width: 90vw;
         font-size: 1.2em;
@@ -398,7 +425,8 @@ a {
         width: 11em;
         margin-top: .1em;
     }
-    .playBtn{
+
+    .playBtn {
         font-size: 1.5em;
         height: 3em;
         width: 6.5em;
@@ -406,7 +434,7 @@ a {
         align-items: center;
         text-align: center;
         border-radius: .5em;
-        margin-top: 1em;
+        margin-top: 2em;
     }
 
     /* .bodyMasterMind,
@@ -451,9 +479,10 @@ a {
     /* .hardLevel {} */
 
     /*Diseño del tablero*/
-    .gameBoard{
+    .gameBoard {
         width: 13.5em;
     }
+
     .board {
         display: grid;
         grid-template-columns: repeat(5, 2em);
@@ -463,32 +492,29 @@ a {
         margin-top: .5em;
         width: 13.5em;
     }
-    
-    .bigCircle,
-    .smallCircles {
-        border: .1em solid white;
-    }
-    
-    .bigCircle{
-        height: 2em;
-    }
-    .circles {
-        width: 5em;
-    }
-    
+
     /*Casillas donde van los colores en el tablero*/
     .bigCircle,
     .smallCircles {
-        border-radius: 50%;
+        border: .15em solid white;
+        border-radius: .5em;
     }
-    
+
+    .bigCircle {
+        height: 2em;
+    }
+
+    .circles {
+        width: 5em;
+    }
+
     /*Donde van las 4 casillas de verificación*/
     .circles {
         display: flex;
         align-items: center;
         column-gap: .1em;
     }
-    
+
     .smallCircles {
         height: 1em;
         width: 1em;
