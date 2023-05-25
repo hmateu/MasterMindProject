@@ -123,12 +123,17 @@ const createBoard = (nRows) => {
     let board = document.getElementById("board");
     let bigCircle;
     let circles;
+    //Id de las celdas donde van los colores en el tablero
+    let idColours=1;
+    //Id de las celdas donde van las pistas
+    let idValidate=1;
     for (let i = 1; i <= nRows; i++) {
         newRow = document.createElement("div");
         newRow.className = "board";
         newRow.id = i;
 
-        if(newRow.id == 3){
+        //Selecciono una fila del tablero
+        if(newRow.id == 6){
             newRow.style.background = "red";
         }
 
@@ -136,6 +141,14 @@ const createBoard = (nRows) => {
             if (j < 4) {
                 bigCircle = document.createElement("div");
                 bigCircle.className = "bigCircle";
+                bigCircle.id = j;
+
+                //Selecciono una celda color del tablero
+                if(bigCircle.id == 3){
+                    bigCircle.style.background = "blue"
+                }
+
+                idColours++;
                 newRow.appendChild(bigCircle);
             } else {
                 circles = document.createElement("div");
@@ -144,6 +157,14 @@ const createBoard = (nRows) => {
                 for (let k = 0; k < 4; k++) {
                     smallCircles = document.createElement("div");
                     smallCircles.className = "smallCircles";
+                    smallCircles.id = k;
+
+                    //Selecciono una chincheta del tablero
+                    if(smallCircles.id == 1){
+                        smallCircles.style.background = "lime"
+                    }
+
+                    idValidate++;
                     circles.appendChild(smallCircles);
                 }
             }
