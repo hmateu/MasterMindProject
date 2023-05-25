@@ -10,7 +10,8 @@ input {
 body {
     margin: 0;
     padding: 0;
-    background: url("../img/wallpaper.jpg") no-repeat;
+    height: 100vh;
+    background: url("../img/wallpaper.jpg") rgb(17, 15, 75) no-repeat;
     background-size: cover;
     background-position-x: center;
 }
