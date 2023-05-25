@@ -55,10 +55,7 @@
     }
 
     .levelBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: .5em;
+        border-radius: 1em;
         width: 15em;
         font-size: 2em;
         height: 3.7em;

@@ -63,7 +63,24 @@ a {
 .lvlInputBtn:hover {
     background-color: rgb(31, 83, 63);
 }
+.levelBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 
+.easyLevel {
+    background-color: rgb(31, 83, 63);
+}
+
+.mediumLevel {
+    background-color: rgb(255, 174, 0);
+}
+
+.hardLevel {
+    background-color: rgb(255, 0, 191);
+}
 /* .bodyMasterMind,
 .bodyLevel {
     display: flex;
@@ -118,17 +135,6 @@ a {
     border: .1em solid black;
 } */
 
-.easyLevel {
-    background-color: green;
-}
-
-.mediumLevel {
-    background-color: rgb(255, 174, 0);
-}
-
-.hardLevel {
-    background-color: red;
-}
 
 .selectColour .inputColours{
     background-color: transparent;
@@ -238,12 +244,8 @@ a {
     .levelsBody {
         margin-top: 2em;
     }
-
     .levelBtn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        /* border-radius: .5em; */
+        border-radius: .5em;
         width: 8em;
         font-size: 2em;
         height: 3em;
