@@ -46,8 +46,10 @@ a {
 }
 
 .messageUser {
-    background-color: rgb(205, 38, 38);
-    border: .2em solid rgb(86, 0, 0);
+    /* background-color: rgb(255, 0, 191);
+    border: .2em solid rgb(168, 30, 134); */
+    background-color: rgb(168, 30, 134);
+    border: .2em solid rgb(255, 0, 191);
     /* color: white; */
     display: flex;
     align-items: center;
