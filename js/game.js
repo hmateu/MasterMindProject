@@ -90,10 +90,12 @@ const paintWinner = () => {
     console.log(`Números aleatorios = ${calculateRandom()}`)
     availableColours.forEach((element, i) => {
         console.log(`Elemento de availableColours ${element}`);
+        arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
         // arrWinnerSquareColours[i].style.background = availableColours[0]; //-------------------No cojo el color random
         // arrWinnerSquareColours[i].style.backgroundColor = "#ff0000";
         // arrWinnerSquareColours[i].style.background = element[calculateRandom()];
     });
+    console.log(`Array winner tiene = ${arrWinnerSquareColours}`)
 }
 
 
