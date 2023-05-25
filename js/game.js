@@ -126,6 +126,12 @@ const createBoard = (nRows) => {
     for (let i = 1; i <= nRows; i++) {
         newRow = document.createElement("div");
         newRow.className = "board";
+        newRow.id = i;
+
+        if(newRow.id == 3){
+            newRow.style.background = "red";
+        }
+
         for (let j = 0; j < 5; j++) {
             if (j < 4) {
                 bigCircle = document.createElement("div");
