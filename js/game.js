@@ -72,20 +72,27 @@ if (successBall == 4) {
 
 let availableColours = JSON.parse(sessionStorage.getItem("colours"));
 let randomNumber = [];
+let randomArr = [];
 const calculateRandom = () => {
     for (let i = 0; i < 4; i++) {
         randomNumber.push(Math.floor(Math.random() * availableColours.length));
     }
     return randomNumber;
 }
-console.log(`******* La secuencia de números ${calculateRandom()} *********`)
-console.log(`Los colores elegidos estan en availableColours, son ${availableColours} y son ${availableColours.length}`)
+    // console.log(`******* La secuencia de números ${calculateRandom()} *********`)
+    // console.log(`Los colores elegidos estan en availableColours, son ${availableColours} y son ${availableColours.length}`)
 const paintWinner = () => {
-    let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
+    // let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
+    // let arrWinnerSquareColours = Array.from(winnerSquareColours);
+    let winnerSquareColours = document.getElementsByClassName("winnerChoiseClass");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
+   
+    console.log(`Números aleatorios = ${calculateRandom()}`)
     availableColours.forEach((element, i) => {
-        // arrWinnerSquareColours[i].style.background = "#ff0000";
-        // arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
+        console.log(`Elemento de availableColours ${element}`);
+        // arrWinnerSquareColours[i].style.background = availableColours[0]; //-------------------No cojo el color random
+        // arrWinnerSquareColours[i].style.backgroundColor = "#ff0000";
+        // arrWinnerSquareColours[i].style.background = element[calculateRandom()];
     });
 }
 
@@ -95,7 +102,7 @@ const paintAvailable = () => {
 
     let availableSquareColours = document.querySelectorAll(".availableChoiceArr .colorSquare");
     let arrAvailableSquareColours = Array.from(availableSquareColours);
-    console.log(arrAvailableSquareColours)
+    // console.log(arrAvailableSquareColours)
     availableColours.forEach((element, i) => {
         arrAvailableSquareColours[i].style.background = availableColours[i];
     });
@@ -146,6 +153,6 @@ switch (nRows) {
 }
 createBoard(nRows);
 
-paintWinner();
-
 paintAvailable();
+
+paintWinner();
