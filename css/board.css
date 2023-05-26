@@ -1,0 +1,53 @@
+#board {
+    width: 20em;
+    background-color: darkgrey;
+    border: solid 0.5em black;
+    margin-top: 2em;
+    margin-left: -3em;
+}
+
+.row {
+
+    height: 2.5em;
+    background-color: darkcyan;
+    border-radius: .5em;
+    margin: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.ball,
+.hintBall {
+    border-radius: .5em;
+}
+
+.ball {
+    height: 2em;
+    width: 2em;
+    border: .2em solid rgb(58, 49, 139);
+}
+
+.hintBalls {
+    display: flex;
+    column-gap: .2em;
+}
+
+.hintBall {
+    height: 1em;
+    width: 1em;
+    border: .2em solid rgb(77, 18, 18);
+}
+
+#check {
+    height: 2em;
+    width: 6em;
+    background-color: rgb(24, 117, 82);
+    cursor: pointer;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 4em;
+}
