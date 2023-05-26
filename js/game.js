@@ -118,8 +118,19 @@ const paintAvailable = () => {
 
     // console.log(available);
 }
-
-
+const rowValidate = () =>{
+    alert("Come On")
+}
+//Selecciono la fila que funciona
+const currentRow = (newRow,nRow) => {
+        console.log(nRow,"-----------------------------")
+        
+            if(nRow != 0){
+                newRow.style.background = "red"
+            }
+        
+        
+}
 
 const createBoard = (nRows) => {
     let board = document.getElementById("board");
@@ -168,8 +179,10 @@ const createBoard = (nRows) => {
                 }
             }
         } board.appendChild(newRow);
+        currentRow(newRow,i);
     }
 }
+
 
 let nRows = sessionStorage.getItem("difficulty");
 switch (nRows) {
@@ -188,4 +201,4 @@ createBoard(nRows);
 
 paintAvailable();
 
-paintWinner();
+// paintWinner();
