@@ -103,14 +103,16 @@ a {
 .hardLevel:hover {
     background-color: rgb(168, 30, 134);
 }
-.checkBtn{
+
+.checkBtn {
     background-color: rgb(24, 117, 82);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.checkBtn:hover{
+
+.checkBtn:hover {
     background-color: rgb(31, 83, 63);
 }
 
@@ -530,12 +532,13 @@ a {
         height: 1em;
         width: 1em;
     }
-.checkBtn{
-    margin-top: 1em;
-    margin-left: 3.5em;
-    height: 2em;
-    width: 6em;
-    border: .15em solid rgb(121, 218, 180);
-    border-radius: .5em;
-}
+
+    .checkBtn {
+        margin-top: 1em;
+        margin-left: 3.5em;
+        height: 2em;
+        width: 6em;
+        border: .15em solid rgb(121, 218, 180);
+        border-radius: .5em;
+    }
 }

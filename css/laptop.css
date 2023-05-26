@@ -181,4 +181,14 @@
         text-align: center;
     }
 
+    .checkBtn {
+        margin-top: 1em;
+        margin-left: .6em;
+        font-size: 1.3em;
+        height: 2em;
+        width: 10em;
+        border: .15em solid rgb(121, 218, 180);
+        border-radius: .5em;
+    }
+
 }
