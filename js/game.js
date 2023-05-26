@@ -1,3 +1,18 @@
+//Calcula el número de filas que tiene el tablero
+let nRows = sessionStorage.getItem("difficulty");
+switch (nRows) {
+    case "easy":
+        nRows = 10;
+        break;
+    case "medium":
+        nRows = 8;
+        break;
+
+    default:
+        nRows = 6;
+        break;
+}
+
 //Crea las filas del tablero
 const createRow = () => {
     let board = document.getElementById("board");
@@ -27,4 +42,12 @@ const createRow = () => {
     row.appendChild(hintBalls);
     board.appendChild(row);
 }
-createRow();
+
+//Pinta el tablero en pantalla dependiendo de la dificultad
+const paintBoard = nRows => {
+    for(let i=0; i<nRows; i++){
+        createRow();
+    }
+}
+
+paintBoard(nRows);
