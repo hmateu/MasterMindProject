@@ -71,7 +71,37 @@ if (successBall == 4) {
 
 
 
+// EMPIEZA EL DRAG AND DROP
 
+const allowDrop = (ev) => {
+    ev.preventDefault();
+}
+
+// function allowDrop(ev) {
+//     ev.preventDefault();
+//   }
+
+const drag = (ev) => {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+  
+//   function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+//   }
+
+const drop = (ev) => {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+//   function drop(ev) {
+//     ev.preventDefault();
+//     var data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+//   }
+
+// TERMINA EL DRAG AND DROP
 
 
 
@@ -114,6 +144,8 @@ const paintAvailable = () => {
     availableColours.forEach((element, i) => {
         arrAvailableSquareColours[i].style.background = availableColours[i];
         arrAvailableSquareColours[i].style.border = ".15em solid white";
+        arrAvailableSquareColours[i].draggable = "true";
+        arrAvailableSquareColours[i].ondragstart = "drag(event)";
     });
 
     // console.log(available);
@@ -126,7 +158,7 @@ const currentRow = (newRow,nRow) => {
         console.log(nRow,"-----------------------------")
         
             if(nRow != 0){
-                newRow.style.background = "red"
+                newRow.style.background = "red";
             }
         
         
@@ -147,6 +179,8 @@ const createBoard = (nRows) => {
                 bigCircle = document.createElement("div");
                 bigCircle.className = "bigCircle";
                 bigCircle.id = j;
+                bigCircle.ondrop = "drop(event)";
+                bigCircle.ondragover = "allowDrop(event)";
                 //Selecciono una celda color del tablero ---------------------------------------------
                 // if (bigCircle.id == 3) bigCircle.style.background = "blue";
                 // idColours++;
