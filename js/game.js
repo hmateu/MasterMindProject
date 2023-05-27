@@ -49,40 +49,53 @@ const paintAvailable = () => {
 
 //Captura el color que pulsa el usuario y lo guarda en la combinación que ha hecho el usuario
 let currentChoice = [];
-const paintSquare = (id) => {
+const createCurrentChoice = (id) => {
     switch (id) {
         case "a0":
-            // console.log(availableColours[0])
-            if(currentChoice.length<4) currentChoice.push(availableColours[0]);
-            // console.log(currentChoice);
+            if(currentChoice.length<4){
+                currentChoice.push(availableColours[0])
+            }else{
+                return currentChoice;
+            } 
             break;
         case "a1":
-            // console.log(availableColours[1])
-            if(currentChoice.length<4) currentChoice.push(availableColours[1]);
-            // console.log(currentChoice);
+            if(currentChoice.length<4){
+                currentChoice.push(availableColours[1]);
+            } else{
+                return currentChoice;
+            }
             break;
         case "a2":
-            // console.log(availableColours[2])
-            if(currentChoice.length<4) currentChoice.push(availableColours[2]);
-            // console.log(currentChoice);
+            if(currentChoice.length<4){
+                currentChoice.push(availableColours[2]);
+            } else{
+                return currentChoice;
+            }
             break;
         case "a3":
-            // console.log(availableColours[3])
-            if(currentChoice.length<4) currentChoice.push(availableColours[3]);
-            // console.log(currentChoice);
+            if(currentChoice.length<4){
+                currentChoice.push(availableColours[3]);
+            } else{
+                return currentChoice;
+            }
             break;
         case "a4":
-            // console.log(availableColours[4])
-            if(currentChoice.length<4) currentChoice.push(availableColours[4]);
-            // console.log(currentChoice);
+            if(currentChoice.length<4){
+                currentChoice.push(availableColours[4]);
+            } else{
+                return currentChoice;
+            }
             break;
         default:
-            if(currentChoice.length<4) currentChoice.push(availableColours[5]);
-            // console.log(currentChoice);
+            if(currentChoice.length<4){
+                currentChoice.push(availableColours[5]);
+            } else{
+                return currentChoice;
+            }
             break;
         }
+        // console.log(currentChoice);
     }
-
 //Crea las filas del tablero
 let board;
 let row;
@@ -120,6 +133,7 @@ const createRow = () => {
         hintBall.className = "hintBall";
         hintBall.id = `row${idRow}-hintBaill${idHintBall}`
         hintBalls.appendChild(hintBall);
+        pintaCurrentRow(row);
         idHintBall++;
     }
 
@@ -137,6 +151,12 @@ const paintBoard = nRows => {
     }
 }
 
+//Pinta la fila del tablero
+const pintaCurrentRow = (row) => {
+    if(row.id != 'row0'){
+        row.style.background="red"
+    }
+}
 paintWinner();
 paintBoard(nRows); 
 paintAvailable();
