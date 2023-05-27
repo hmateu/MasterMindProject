@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-/* Página de inicio */
+/* Home page */
 .masterMainBody {
     display: flex;
     flex-direction: column;
@@ -36,7 +36,7 @@
     background-color: rgb(31, 83, 63);
 }
 
-/* Cómo jugar */
+/* How to play */
 .sectionTitle {
     border-bottom: .1em solid white;
 }
@@ -227,7 +227,7 @@ a {
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
 
-    /* Página de inicio */
+    /* Home page */
     .navBar {
         height: 17vh;
         margin-bottom: 1em;
@@ -272,13 +272,11 @@ a {
         row-gap: 1em;
     }
 
-    /* Cómo jugar */
+    /* How to play */
     .sectionTitle {
         width: 90vw;
         font-size: 1.2em;
     }
-
-    
 
     .section {
         display: flex;

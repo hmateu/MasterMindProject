@@ -1,6 +1,6 @@
 @media (min-width:1200px) {
 
-    /* Página de inicio */
+    /* Home page */
     .navBar {
         margin-bottom: 2em;
         /* background-color: lightcoral; */
@@ -49,7 +49,7 @@
         column-gap: 1em;
     }
 
-    /* Cómo jugar */
+    /* How to play */
     .sectionTitle {
         width: 90vw;
         font-size: 1.2em;
