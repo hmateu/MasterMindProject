@@ -88,4 +88,16 @@ const paintWinner = () => {
     console.log(`Array winner tiene = ${arrWinnerSquareColours}`)
 }
 
+//Pinta la selección de colores que ha hecho el usuario
+const paintAvailable = () => {
+    let availableSquareColours = document.querySelectorAll(".availableChoiceArr .colorSquare");
+    let arrAvailableSquareColours = Array.from(availableSquareColours);
+    availableColours.forEach((element, i) => {
+        arrAvailableSquareColours[i].style.background = availableColours[i];
+        arrAvailableSquareColours[i].style.border = ".15em solid white";
+    });
+}
+
+paintAvailable();
+
 paintWinner();
