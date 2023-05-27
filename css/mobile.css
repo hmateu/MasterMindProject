@@ -3,6 +3,41 @@
     color: white;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.masterMainBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playGame {
+    background-color: rgb(255, 0, 191);
+    /* color: white; */
+    border: .01em solid white;
+}
+
+.playGame:hover {
+    background-color: rgb(168, 30, 134);
+}
+
+.howToPlay,
+.developer {
+    background-color: rgb(24, 117, 82);
+    border: .01em solid white;
+}
+
+.howToPlay:hover,
+.developer:hover {
+    background-color: rgb(31, 83, 63);
+}
+
+/*---------------------------------------------- REVISADO -----------------------------------------------*/
+
 input {
     color: black;
 }
@@ -20,26 +55,8 @@ a {
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-/* .navBar {
-    background-color: lightcoral;
-} */
 
-.masterMainBody {
-    /* background-color: lightblue; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* .formLabel{
-    color: white;
-} */
 .inputName {
     border: .1em solid white;
     border-radius: .4em;
@@ -117,35 +134,6 @@ a {
     background-color: rgb(31, 83, 63);
 }
 
-/* .bodyMasterMind,
-.bodyLevel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-} */
-
-/* .btnMain,
-.levelBtn {
-    border: .1em solid black;
-    border-radius: .5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-/* .easyLevel{
-    background: url("../img/easyLevel.png") no-repeat;
-    background-position: bottom left;
-} */
-/* .mediumLevel{
-    background: url("../img/mediumLevel.png") no-repeat;
-    background-position: bottom left;
-} */
-/* .hardLevel{
-    background: url("../img/hardLevel.png") no-repeat;
-    background-position: bottom center;
-} */
-
 .hardDifficulty {
     display: flex;
     flex-direction: column;
@@ -162,15 +150,6 @@ a {
     display: flex;
     justify-content: space-around;
 }
-
-/* .inputColours {
-    display: flex;
-    height: 1em;
-    width: 1em;
-    border-radius: .2em;
-    border: .1em solid black;
-} */
-
 
 .selectColour .inputColours {
     background-color: transparent;
@@ -199,30 +178,9 @@ a {
     background-color: rgb(168, 30, 134);
 }
 
-.playGame {
-    background-color: rgb(255, 0, 191);
-    /* color: white; */
-    border: .01em solid white;
-}
-
-.playGame:hover {
-    background-color: rgb(168, 30, 134);
-}
 
 .sectionTitle {
     border-bottom: .1em solid white;
-}
-
-.howToPlay,
-.developer {
-    background-color: rgb(24, 117, 82);
-    /* color: white; */
-    border: .01em solid white;
-}
-
-.howToPlay:hover,
-.developer:hover {
-    background-color: rgb(31, 83, 63);
 }
 
 .gameBody {
@@ -234,9 +192,6 @@ a {
     margin-left: -2.65em;
 }
 
-/* .titleArrColours{
-    color: white;
-} */
 .showColours {
     display: flex;
     column-gap: .5em;
@@ -300,6 +255,8 @@ a {
         align-items: center;
         row-gap: 1em;
     }
+    /*---------------------------------------------- REVISADO -----------------------------------------------*/
+
 
     .levelsBody {
         margin-top: 2em;
@@ -450,47 +407,6 @@ a {
         border-radius: .5em;
         margin-top: 2em;
     }
-
-    /* .bodyMasterMind,
-    .bodyLevel {
-        margin-top: .5em;
-    } */
-
-    /* .bodyMasterMind {
-        row-gap: 2em;
-    } */
-
-    /* .btnsMain {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 1em;
-        width: 100%;
-    } */
-
-
-    /* .lvl .bodyMasterMind {
-        margin-top: 6em;
-    } */
-
-    /* .lvl .bodyLevel {
-        margin-top: 4.5em;
-    } */
-
-    /* .bodyLevel {
-        row-gap: 1.5em;
-    } */
-
-    /* .levelBtn {
-        width: 12em;
-        height: 5em;
-    } */
-
-    /* .easyLevel {} */
-
-    /* .mediumLevel {} */
-
-    /* .hardLevel {} */
 
     /*Diseño del tablero*/
     .gameBoard {
