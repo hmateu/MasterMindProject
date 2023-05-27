@@ -94,7 +94,7 @@ const createCurrentChoice = (id) => {
             }
             break;
         }
-        // console.log(currentChoice);
+        console.log(currentChoice);
     }
 //Crea las filas del tablero
 let board;
@@ -133,13 +133,13 @@ const createRow = () => {
         hintBall.className = "hintBall";
         hintBall.id = `row${idRow}-hintBaill${idHintBall}`
         hintBalls.appendChild(hintBall);
-        pintaCurrentRow(row);
         idHintBall++;
     }
-
+    
     row.appendChild(balls);
     row.appendChild(hintBalls);
     board.appendChild(row);
+    pintaCurrentRow(row);
 
     
 }
@@ -153,8 +153,13 @@ const paintBoard = nRows => {
 
 //Pinta la fila del tablero
 const pintaCurrentRow = (row) => {
-    if(row.id != 'row0'){
-        row.style.background="red"
+    if(row.id == 'row0'){
+        row.style.background="red";
+        let arrBalls = Array.from(document.querySelectorAll('#row0 .ball'));
+        console.log(arrBalls)
+        arrBalls.forEach((element,i) => {
+            element.style.background ="blue";
+        });
     }
 }
 paintWinner();
