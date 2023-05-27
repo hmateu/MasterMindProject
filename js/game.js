@@ -158,7 +158,11 @@ const pintaCurrentRow = (row) => {
         let arrBalls = Array.from(document.querySelectorAll('#row0 .ball'));
         console.log(arrBalls)
         arrBalls.forEach((element,i) => {
-            element.style.background ="blue";
+            // element.style.background ="blue";
+            if(currentChoice[i] != undefined){
+                console.log(currentChoice)
+                element.style.background = currentChoice[i];
+            }
         });
     }
 }
