@@ -35,16 +35,6 @@ const paintWinner = () => {
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
         arrWinnerSquareColours[i].style.border = ".15em solid white";
     }
-
-
-
-
-    // availableColours.forEach((element, i) => {
-    //     console.log(`Elemento de availableColours ${element}`);
-    //     arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
-    //     arrWinnerSquareColours[i].style.border = ".15em solid white";
-    // });
-    // console.log(`Array winner tiene = ${arrWinnerSquareColours}`)
 }
 
 //Pinta la selección de colores que ha hecho el usuario
@@ -149,5 +139,4 @@ const paintBoard = nRows => {
 
 paintWinner();
 paintBoard(nRows); 
-
 paintAvailable();

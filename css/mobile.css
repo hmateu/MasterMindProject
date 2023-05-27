@@ -359,12 +359,12 @@ input {
     .coloursTitle {
         font-size: 1.5em;
         width: 10em;
-        margin-bottom: 1em;
+        margin-bottom: .5em;
     }
 
     .easyDifficulty {
         row-gap: 2em;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     .hardDifficulty {
@@ -386,6 +386,7 @@ input {
     
     .mediumDifficulty .selectColour {
         column-gap: 2em;
+        margin-bottom: -1em;
     }
     
     .hardDifficulty .selectColour {
@@ -402,7 +403,7 @@ input {
         height: 3em;
         width: 6.5em;
         border-radius: .5em;
-        margin-top: 2em;
+        margin-top: 1.5em;
     }
     /*---------------------------------------------- REVISADO -----------------------------------------------*/
     

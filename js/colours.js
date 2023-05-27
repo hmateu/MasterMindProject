@@ -11,12 +11,13 @@ if(difficulty == "easy"){
 //Color Picker
 const colorPickers = document.querySelectorAll(`#${difficulty} .inputColours`);
 const colorBall = document.querySelectorAll(`#${difficulty} .colour`);
-colorPickers.forEach((picker, i) => {
-    picker.addEventListener("input", (e) => {
-        const color = e.target.value;
-        colorBall[i].style.background = color;
-    })
-})
+
+// colorPickers.forEach((picker, i) => {
+//     picker.addEventListener("input", (e) => {
+//         const color = e.target.value;
+//         colorBall[i].style.background = color;
+//     })
+// })
 
 //Guardar colores
 document.getElementById("playBtn").addEventListener("click",() => {
