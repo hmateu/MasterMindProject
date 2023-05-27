@@ -42,66 +42,24 @@
 }
 
 .bodySection {
-        display: flex;
-        flex-direction: column;
-        width: 90vw;
-        row-gap: 1em;
-    }
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    row-gap: 1em;
+}
 
 .bottomSection {
     display: flex;
     flex-direction: row-reverse;
 }
 
-
-/*---------------------------------------------- REVISADO -----------------------------------------------*/
-
-input {
-    color: black;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: url("../img/wallpaper.jpg") rgb(17, 15, 75) no-repeat;
-    background-size: cover;
-    background-position-x: center;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-
-.inputName {
-    border: .1em solid white;
-    border-radius: .4em;
-    display: flex;
-    text-align: center;
-}
-
+/* Level */
 .messageUser {
-    /* background-color: rgb(255, 0, 191);
-    border: .2em solid rgb(168, 30, 134); */
+    display: flex;
+    align-items: center;
+    text-align: center;
     background-color: rgb(168, 30, 134);
     border: .2em solid rgb(255, 0, 191);
-    /* color: white; */
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.lvlInputBtn {
-    background-color: rgb(24, 117, 82);
-    /* color: white; */
-    border-radius: .7em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: .01em solid white;
-    cursor: pointer;
 }
 
 .lvlInputBtn:hover {
@@ -112,8 +70,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* color: white; */
 }
+
 
 .easyLevel {
     background-color: rgb(24, 117, 82);
@@ -137,6 +95,43 @@ a {
 
 .hardLevel:hover {
     background-color: rgb(168, 30, 134);
+}
+
+/*---------------------------------------------- REVISADO -----------------------------------------------*/
+
+input {
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("../img/wallpaper.jpg") rgb(17, 15, 75) no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.inputName {
+    border: .1em solid white;
+    border-radius: .4em;
+    display: flex;
+    text-align: center;
+}
+
+.lvlInputBtn {
+    background-color: rgb(24, 117, 82);
+    /* color: white; */
+    border-radius: .7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .01em solid white;
+    cursor: pointer;
 }
 
 .checkBtn {
@@ -285,12 +280,27 @@ a {
         column-gap: 1em;
     }
 
-    
-    /*---------------------------------------------- REVISADO -----------------------------------------------*/
-
-
+    /* Level */
     .levelsBody {
         margin-top: 2em;
+    }
+
+    .formLabel {
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: -.7em;
+    }
+
+    .inputName {
+        height: 1.6em;
+        width: 11.5em;
+        font-size: 1.4em;
+    }
+
+    .lvlInputBtn {
+        font-size: 1.5em;
+        width: 5em;
+        height: 2em;
     }
 
     .levelBtn {
@@ -299,6 +309,11 @@ a {
         font-size: 2em;
         height: 3em;
     }
+
+    /*---------------------------------------------- REVISADO -----------------------------------------------*/
+
+
+
 
     .coloursTitle {
         font-size: 1.5em;
@@ -379,30 +394,17 @@ a {
 
 
 
-    
 
-    
 
-    
 
-    .formLabel {
-        font-size: 2em;
-        margin-top: 1em;
-        margin-bottom: -.7em;
-    }
 
-    .inputName {
-        height: 1.6em;
-        width: 11.5em;
-        font-size: 1.4em;
-    }
 
-    .lvlInputBtn {
-        font-size: 1.5em;
-        width: 5em;
-        height: 2em;
-        /* margin-top: 1em; */
-    }
+
+
+
+
+
+
 
     .messageUser {
         font-size: 1.7em;

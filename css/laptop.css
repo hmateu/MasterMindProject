@@ -62,12 +62,30 @@
         column-gap: 1em;
     }
 
-    /*---------------------------------------------- REVISADO -----------------------------------------------*/
+    /* Level */
+    .formLabel {
+        font-size: 2em;
+    }
 
+    .inputName {
+        height: 2em;
+        width: 11.5em;
+        font-size: 1.4em;
 
+    }
 
-    .levelsBody {
-        margin-top: 0em;
+    .lvlInputBtn {
+        font-size: 1.5em;
+        width: 7em;
+        height: 3em;
+    }
+
+    .messageUser {
+        font-size: 1.7em;
+        border-radius: .5em;
+        height: 4em;
+        width: 11em;
+        margin-top: 2em;
     }
 
     .levelBtn {
@@ -76,6 +94,13 @@
         font-size: 2em;
         height: 3.7em;
     }
+
+    /*---------------------------------------------- REVISADO -----------------------------------------------*/
+
+
+
+
+
 
     .colourBody {
         /* height: 80vh; */
@@ -144,33 +169,13 @@
 
 
 
-    
 
-    
 
-    .formLabel {
-        font-size: 2em;
-    }
 
-    .inputName {
-        height: 2em;
-        width: 11.5em;
-        font-size: 1.4em;
-    }
 
-    .lvlInputBtn {
-        font-size: 1.5em;
-        width: 7em;
-        height: 3em;
-    }
 
-    .messageUser {
-        font-size: 1.7em;
-        border-radius: .5em;
-        height: 3.5em;
-        width: 11em;
-        margin-top: .1em;
-    }
+
+
 
     .checkBtn {
         margin-top: 1em;
