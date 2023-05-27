@@ -3,6 +3,19 @@
     color: white;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("../img/wallpaper.jpg") rgb(17, 15, 75) no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+a {
+    text-decoration: none;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -153,6 +166,10 @@
     appearance: none;
     border: .2em solid white;
 }
+
+.inputColours::-moz-color-swatch {
+    border: none;
+}
 /* Colours - Picker Colour */
 
 /*---------------------------------------------- REVISADO -----------------------------------------------*/
@@ -161,18 +178,7 @@ input {
     color: black;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background: url("../img/wallpaper.jpg") rgb(17, 15, 75) no-repeat;
-    background-size: cover;
-    background-position-x: center;
-}
 
-a {
-    text-decoration: none;
-}
 
 .inputName {
     border: .1em solid white;
@@ -212,16 +218,6 @@ a {
     width: 1em;
     border: .1em solid black;
 }
-
-
-
-.inputColours::-moz-color-swatch {
-    border: none;
-}
-
-
-
-
 
 .gameBody {
     display: flex;

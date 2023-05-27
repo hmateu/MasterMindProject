@@ -63,3 +63,29 @@ const paintBoard = nRows => {
 }
 
 paintBoard(nRows); 
+
+// Calcula los índices donde guardará los colores
+let availableColours = JSON.parse(sessionStorage.getItem("colours"));
+const calculateRandom = () => {
+    let randomNumber = [];
+    for (let i = 0; i < 4; i++) {
+        randomNumber.push(Math.floor(Math.random() * availableColours.length));
+    }
+    return randomNumber;
+}
+
+//Pinta la combinación ganadora
+const paintWinner = () => {
+    let winnerSquareColours = document.getElementsByClassName("winnerChoiseClass");
+    let arrWinnerSquareColours = Array.from(winnerSquareColours);
+
+    console.log(`Números aleatorios = ${calculateRandom()}`)
+    availableColours.forEach((element, i) => {
+        console.log(`Elemento de availableColours ${element}`);
+        arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
+        arrWinnerSquareColours[i].style.border = ".15em solid white";
+    });
+    console.log(`Array winner tiene = ${arrWinnerSquareColours}`)
+}
+
+paintWinner();
