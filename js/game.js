@@ -29,12 +29,22 @@ const paintWinner = () => {
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
 
     console.log(`Números aleatorios = ${calculateRandom()}`)
-    availableColours.forEach((element, i) => {
-        console.log(`Elemento de availableColours ${element}`);
+
+    for(let i = 0; i < 4; i++){
+            // console.log(`Elemento de availableColours ${availableColours[i]}`);
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
         arrWinnerSquareColours[i].style.border = ".15em solid white";
-    });
-    console.log(`Array winner tiene = ${arrWinnerSquareColours}`)
+    }
+
+
+
+
+    // availableColours.forEach((element, i) => {
+    //     console.log(`Elemento de availableColours ${element}`);
+    //     arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
+    //     arrWinnerSquareColours[i].style.border = ".15em solid white";
+    // });
+    // console.log(`Array winner tiene = ${arrWinnerSquareColours}`)
 }
 
 //Pinta la selección de colores que ha hecho el usuario
@@ -54,63 +64,69 @@ const paintSquare = (id) => {
         case "a0":
             // console.log(availableColours[0])
             if(currentChoice.length<4) currentChoice.push(availableColours[0]);
-            console.log(currentChoice);
+            // console.log(currentChoice);
             break;
         case "a1":
             // console.log(availableColours[1])
             if(currentChoice.length<4) currentChoice.push(availableColours[1]);
-            console.log(currentChoice);
+            // console.log(currentChoice);
             break;
         case "a2":
             // console.log(availableColours[2])
             if(currentChoice.length<4) currentChoice.push(availableColours[2]);
-            console.log(currentChoice);
+            // console.log(currentChoice);
             break;
         case "a3":
             // console.log(availableColours[3])
             if(currentChoice.length<4) currentChoice.push(availableColours[3]);
-            console.log(currentChoice);
+            // console.log(currentChoice);
             break;
         case "a4":
             // console.log(availableColours[4])
             if(currentChoice.length<4) currentChoice.push(availableColours[4]);
-            console.log(currentChoice);
+            // console.log(currentChoice);
             break;
         default:
             if(currentChoice.length<4) currentChoice.push(availableColours[5]);
-            console.log(currentChoice);
+            // console.log(currentChoice);
             break;
+        }
     }
-}
 
 //Crea las filas del tablero
+let board;
+let row;
+let idRow = 0;
+let ball;
+let balls;
+let idBall = 0;
+let hintBall;
+let hintBalls;
+let idHintBall = 0;
 const createRow = () => {
-    let idRow = 0;
-    let idBall = 0;
-    let idHintBall = 0;
-    let board = document.getElementById("board");
+    board = document.getElementById("board");
 
-    let row = document.createElement("div");
+    row = document.createElement("div");
     row.className = "row";
     row.id = `row${idRow}`;
     idRow++;
 
-    let balls = document.createElement("div");
+    balls = document.createElement("div");
     balls.className = "balls";
 
     for (let i = 0; i < 4; i++) {
-        let ball = document.createElement("div");
+        ball = document.createElement("div");
         ball.className = "ball";
         ball.id = `row${idRow}-ball${idBall}`;
         balls.appendChild(ball);
         idBall++;
     }
 
-    let hintBalls = document.createElement("div");
+    hintBalls = document.createElement("div");
     hintBalls.className = "hintBalls";
 
     for (let i = 0; i < 4; i++) {
-        let hintBall = document.createElement("div");
+        hintBall = document.createElement("div");
         hintBall.className = "hintBall";
         hintBall.id = `row${idRow}-hintBaill${idHintBall}`
         hintBalls.appendChild(hintBall);
@@ -131,10 +147,7 @@ const paintBoard = nRows => {
     }
 }
 
+paintWinner();
 paintBoard(nRows); 
 
 paintAvailable();
-
-paintWinner();
-
-
