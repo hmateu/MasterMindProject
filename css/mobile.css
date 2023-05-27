@@ -9,6 +9,7 @@
     align-items: center;
 }
 
+/* Página de inicio */
 .masterMainBody {
     display: flex;
     flex-direction: column;
@@ -17,7 +18,6 @@
 
 .playGame {
     background-color: rgb(255, 0, 191);
-    /* color: white; */
     border: .01em solid white;
 }
 
@@ -35,6 +35,24 @@
 .developer:hover {
     background-color: rgb(31, 83, 63);
 }
+
+/* Cómo jugar */
+.sectionTitle {
+    border-bottom: .1em solid white;
+}
+
+.bodySection {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        row-gap: 1em;
+    }
+
+.bottomSection {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 
 /*---------------------------------------------- REVISADO -----------------------------------------------*/
 
@@ -179,9 +197,6 @@ a {
 }
 
 
-.sectionTitle {
-    border-bottom: .1em solid white;
-}
 
 .gameBody {
     display: flex;
@@ -212,6 +227,7 @@ a {
 /* @media (max-width:576px) { */
 @media (max-width:1199px) {
 
+    /* Página de inicio */
     .navBar {
         height: 17vh;
         margin-bottom: 1em;
@@ -255,6 +271,23 @@ a {
         align-items: center;
         row-gap: 1em;
     }
+
+    /* Cómo jugar */
+    .sectionTitle {
+        width: 90vw;
+        font-size: 1.2em;
+    }
+
+    
+
+    .section {
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        column-gap: 1em;
+    }
+
+    
     /*---------------------------------------------- REVISADO -----------------------------------------------*/
 
 
@@ -346,29 +379,13 @@ a {
     }
 
 
-    .sectionTitle {
-        width: 90vw;
-        font-size: 1.2em;
-    }
 
-    .bodySection {
-        display: flex;
-        flex-direction: column;
-        width: 90vw;
-        row-gap: 1em;
-    }
 
-    .section {
-        display: flex;
-        align-items: center;
-        text-align: justify;
-        column-gap: 1em;
-    }
+    
 
-    .bottomSection {
-        display: flex;
-        flex-direction: row-reverse;
-    }
+    
+
+    
 
     .formLabel {
         font-size: 2em;
