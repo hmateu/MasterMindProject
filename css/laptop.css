@@ -2,12 +2,14 @@
 
     /* Home page */
     .navBar {
+        /* height: 17vh; */
+        margin-top: 2em;
         margin-bottom: 2em;
-        /* background-color: lightcoral; */
     }
 
-    .logo {
-        height: 18vh;
+    .logo{
+        font-size: 10em;
+        letter-spacing: 0.1em;
     }
 
     .masterMainBody,
