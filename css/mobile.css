@@ -97,6 +97,64 @@
     background-color: rgb(168, 30, 134);
 }
 
+/* Colours */
+.colourBody {
+    display: flex;
+    justify-content: center;
+}
+
+.coloursTitle {
+    align-items: center;
+    text-align: center;
+}
+
+.easyDifficulty {
+    display: flex;
+    flex-direction: column;
+}
+
+.hardDifficulty {
+    display: flex;
+    flex-direction: column;
+    row-gap: .1em;
+}
+
+.playBtn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.playBtn {
+    background-color: rgb(255, 0, 191);
+    cursor: pointer;
+}
+
+.playBtn:hover {
+    background-color: rgb(168, 30, 134);
+}
+
+/* Colours - Picker Colour */
+.selectColour {
+    display: flex;
+    justify-content: space-around;
+}
+
+.selectColour .inputColours {
+    background-color: transparent;
+    height: 6em;
+    width: 6em;
+    border: none;
+    appearance: none;
+}
+
+.selectColour .inputColours::-webkit-color-swatch {
+    border-radius: 50%;
+    appearance: none;
+    border: .2em solid white;
+}
+/* Colours - Picker Colour */
+
 /*---------------------------------------------- REVISADO -----------------------------------------------*/
 
 input {
@@ -147,11 +205,7 @@ a {
     background-color: rgb(31, 83, 63);
 }
 
-.hardDifficulty {
-    display: flex;
-    flex-direction: column;
-    row-gap: .1em;
-}
+
 
 .colour {
     height: 1em;
@@ -159,37 +213,13 @@ a {
     border: .1em solid black;
 }
 
-.selectColour {
-    display: flex;
-    justify-content: space-around;
-}
 
-.selectColour .inputColours {
-    background-color: transparent;
-    height: 6em;
-    width: 6em;
-    border: none;
-    appearance: none;
-}
-
-.selectColour .inputColours::-webkit-color-swatch {
-    border-radius: 50%;
-    appearance: none;
-    border: none;
-}
 
 .inputColours::-moz-color-swatch {
     border: none;
 }
 
-.playBtn {
-    background-color: rgb(255, 0, 191);
-    cursor: pointer;
-}
 
-.playBtn:hover {
-    background-color: rgb(168, 30, 134);
-}
 
 
 
@@ -309,80 +339,34 @@ a {
         font-size: 2em;
         height: 3em;
     }
-
-    /*---------------------------------------------- REVISADO -----------------------------------------------*/
-
-
-
-
+    
+    .messageUser {
+        font-size: 1.7em;
+        border-radius: .5em;
+        height: 3.5em;
+        width: 11em;
+        margin-top: .1em;
+    }
+    
+    /* Colours */
+    .colourBody {
+        row-gap: 0em;
+    }
+    
     .coloursTitle {
         font-size: 1.5em;
         width: 10em;
-        align-items: center;
-        text-align: center;
         margin-bottom: 1em;
     }
 
-    .colourBody {
-        /* height: 80vh; */
-        display: flex;
-        justify-content: center;
-        row-gap: 0em;
-    }
-
-
     .easyDifficulty {
-        display: flex;
-        flex-direction: column;
         row-gap: 2em;
         margin-top: 2em;
     }
 
-    .mediumDifficulty .inputColour {
-        display: flex;
-        column-gap: 7em;
-    }
-
-    .mediumDifficulty .selectColour {
-        column-gap: 2em;
-    }
-
-    .hardDifficulty .selectColour {
-        column-gap: 1em;
-    }
-
     .hardDifficulty {
-        display: flex;
         row-gap: 1em;
         margin-top: 2em;
-    }
-
-    .inputColour {
-        display: flex;
-        justify-content: center;
-        column-gap: 1.5em;
-    }
-
-    .colour {
-        height: 5em;
-        width: 5em;
-        border: .1em solid black;
-        border-radius: 50%;
-    }
-
-    .selectColour {
-        display: flex;
-        justify-content: space-around;
-        column-gap: 2em;
-    }
-
-    .inputColours {
-        display: flex;
-        padding: 0;
-        height: 3em;
-        width: 3em;
-        border-radius: .2em;
-        /* border: .1em solid black; */
     }
 
     .sectionColours {
@@ -391,39 +375,75 @@ a {
         row-gap: .5em;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    .messageUser {
-        font-size: 1.7em;
-        border-radius: .5em;
-        height: 3.5em;
-        width: 11em;
-        margin-top: .1em;
+    .selectColour {
+        display: flex;
+        justify-content: space-around;
+        column-gap: 2em;
+    }
+    
+    .mediumDifficulty .selectColour {
+        column-gap: 2em;
+    }
+    
+    .hardDifficulty .selectColour {
+        column-gap: 1em;
+    }
+    
+    .mediumDifficulty .inputColour {
+        display: flex;
+        column-gap: 7em;
     }
 
     .playBtn {
         font-size: 1.5em;
         height: 3em;
         width: 6.5em;
-        display: flex;
-        align-items: center;
-        text-align: center;
         border-radius: .5em;
         margin-top: 2em;
     }
+    /*---------------------------------------------- REVISADO -----------------------------------------------*/
+    
+    
+    
+    
+
+
+
+
+
+    
+
+    /* .inputColour {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.5em;
+    } */
+
+    /* .colour {
+        height: 5em;
+        width: 5em;
+        border: .1em solid black;
+        border-radius: 50%;
+    } */
+
+    
+
+    /* .inputColours { */
+        /* display: flex;
+        padding: 0;
+        height: 3em;
+        width: 3em;
+        border-radius: .2em; */
+        /* border: .1em solid black; */
+    /* } */
+
+    
+
+
+
+
+
+    
 
     /*Diseño del tablero*/
     .gameBoard {
