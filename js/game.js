@@ -47,29 +47,38 @@ const paintAvailable = () => {
     });
 }
 
-//Captura el color que pulsa el usuario
+//Captura el color que pulsa el usuario y lo guarda en la combinación que ha hecho el usuario
+let currentChoice = [];
 const paintSquare = (id) => {
     switch (id) {
         case "a0":
-            console.log(availableColours[0])
+            // console.log(availableColours[0])
+            if(currentChoice.length<4) currentChoice.push(availableColours[0]);
+            console.log(currentChoice);
             break;
         case "a1":
-            console.log(availableColours[1])
+            // console.log(availableColours[1])
+            if(currentChoice.length<4) currentChoice.push(availableColours[1]);
+            console.log(currentChoice);
             break;
         case "a2":
-            console.log(availableColours[2])
+            // console.log(availableColours[2])
+            if(currentChoice.length<4) currentChoice.push(availableColours[2]);
+            console.log(currentChoice);
             break;
         case "a3":
-            console.log(availableColours[3])
+            // console.log(availableColours[3])
+            if(currentChoice.length<4) currentChoice.push(availableColours[3]);
+            console.log(currentChoice);
             break;
         case "a4":
-            console.log(availableColours[4])
+            // console.log(availableColours[4])
+            if(currentChoice.length<4) currentChoice.push(availableColours[4]);
+            console.log(currentChoice);
             break;
-        case "a5":
-            console.log(availableColours[5])
-            break;
-    
         default:
+            if(currentChoice.length<4) currentChoice.push(availableColours[5]);
+            console.log(currentChoice);
             break;
     }
 }
