@@ -162,4 +162,23 @@
         border-radius: .5em;
     }
 
+    /* Winner */
+    .bodyWinner {
+        font-size: 4em;
+        margin-bottom: 2em;
+    }
+
+    .newGame,
+    .exit {
+        border: .2em solid white;
+        font-size: 2em;
+        height: 3em;
+        transition: background-color 0.3s;
+    }
+
+    .newGame {
+        margin-bottom: 2em;
+        margin-right: 6em;
+    }
+
 }

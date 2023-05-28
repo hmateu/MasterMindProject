@@ -270,6 +270,12 @@ input {
     background-color: rgb(197, 197, 197);
 }
 
+/*Winner*/
+.newGame:hover,
+.exit:hover {
+    background-color: rgb(23, 22, 110);
+}
+
 /* Vista móvil */
 @media (max-width:1199px) {
 
@@ -482,5 +488,23 @@ input {
         height: 2em;
         width: 6em;
         border-radius: .5em;
+    }
+
+    /* Winner */
+    .bodyWinner {
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 2.5em;
+    }
+
+    .newGame,
+    .exit {
+        border: .2em solid white;
+        font-size: 1.3em;
+        height: 3em;
+    }
+
+    .newGame {
+        margin-bottom: 2em;
     }
 }
