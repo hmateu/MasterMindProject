@@ -1,7 +1,7 @@
 //Calcula el número de filas que tiene el tablero
 let nRows = sessionStorage.getItem("difficulty");
-const checkButton =  document.querySelector(".checkBtn");
-let winnerChoise = []
+const checkButton = document.querySelector(".checkBtn");
+let winnerChoise = [];
 switch (nRows) {
     case "easy":
         nRows = 10;
@@ -30,14 +30,19 @@ const paintWinner = () => {
     let winnerSquareColours = document.getElementsByClassName("winnerChoiseClass");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
 
-    console.log(`Números aleatorios = ${calculateRandom()}`)
-
-    for(let i = 0; i < 4; i++){
-            // console.log(`Elemento de availableColours ${availableColours[i]}`);
+    console.log(`Números aleatorios = ${calculateRandom()}`);
+    console.log("___________")
+    console.log(`Elemento de availableColours ${availableColours}`);
+    console.log("___________")
+    for (let i = 0; i < 4; i++) {
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
-        winnerChoise.push(availableColours[calculateRandom()[i]])
+        // console.log(arrWinnerSquareColours,"------------------------------");
+        // winnerChoise[i] = arrWinnerSquareColours[i];
         arrWinnerSquareColours[i].style.border = ".15em solid white";
     }
+    arrWinnerSquareColours.forEach(element => {
+        console.log(element.style.background)
+    });
 }
 
 //Pinta la selección de colores que ha hecho el usuario
@@ -52,130 +57,137 @@ const paintAvailable = () => {
 // Valida la fila que se ha completado en el tablero y cambia a la siguiente
 const rowValidate = () => {
     // for(let i = 1; i<=nRows; i++){
-        //     console.log("---------------------------------------- Esta es la i",i);
-        // }
-        console.log(currentChoice)
-        console.log(idDeLaRow < nRows)
-        if(idDeLaRow < nRows){
-            // Comparaciones
-            idDeLaRow+=1;
-            currentChoice = []
-            checkButton.classList.add("disabled")
+    //     console.log("---------------------------------------- Esta es la i",i);
+    // }
+    console.log(currentChoice);
+    console.log(idDeLaRow < nRows);
+    if (idDeLaRow < nRows) {
+        // Comparaciones
+        winnerChoise.forEach((element, i) => {
+            console.log(`winnerChoise ${i} es el ${element}`);
+        })
+        currentChoice.forEach((element, i) => {
+            console.log(`currrentChoice ${i} es el ${element}`);
+        })
+        //Fin comparaciones
+        idDeLaRow += 1;
+        currentChoice = [];
+        checkButton.classList.add("disabled");
 
-            return idDeLaRow;
-          
-        }
-       
+        return idDeLaRow;
+
     }
-    
-    let idDeLaRow = 0;
+
+}
+
+let idDeLaRow = 0;
 // rowValidate();
 //Captura el color que pulsa el usuario y lo guarda en la combinación que ha hecho el usuario
 let currentChoice = [];
 let bolaPintada;
 const createCurrentChoice = (id) => {
-    console.log(currentChoice)
+    console.log(currentChoice);
     if (currentChoice.length < 3) {
-        checkButton.classList.add("disabled")
-    
-    }else{
-        checkButton.classList.remove("disabled")
-    
+        checkButton.classList.add("disabled");
+
+    } else {
+        checkButton.classList.remove("disabled");
+
     }
     switch (id) {
         case "a0":
-            if(currentChoice.length<4){
-                currentChoice.push(availableColours[0])
+            if (currentChoice.length < 4) {
+                currentChoice.push(availableColours[0]);
                 bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
-                // console.log(idDeLaRow)
-                bolaPintada.forEach((element,i) => {
+                // console.log(idDeLaRow);
+                bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                    //     console.log(currentChoice)
-                        element.style.background = currentChoice[i];
+                    //     console.log(currentChoice);
+                    element.style.background = currentChoice[i];
                     // }
                 });
-            }else{
+            } else {
                 return currentChoice;
-            } 
+            }
             break;
         case "a1":
-            if(currentChoice.length<4){
+            if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[1]);
                 bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
-                bolaPintada.forEach((element,i) => {
+                bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                    //     console.log(currentChoice)
-                        element.style.background = currentChoice[i];
+                    //     console.log(currentChoice);
+                    element.style.background = currentChoice[i];
                     // }
                 });
-            } else{
+            } else {
                 return currentChoice;
             }
             break;
         case "a2":
-            if(currentChoice.length<4){
+            if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[2]);
                 bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
-                bolaPintada.forEach((element,i) => {
+                bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                    //     console.log(currentChoice)
-                        element.style.background = currentChoice[i];
+                    //     console.log(currentChoice);
+                    element.style.background = currentChoice[i];
                     // }
                 });
-            } else{
+            } else {
                 return currentChoice;
             }
             break;
         case "a3":
-            if(currentChoice.length<4){
+            if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[3]);
                 bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
-                bolaPintada.forEach((element,i) => {
+                bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                    //     console.log(currentChoice)
-                        element.style.background = currentChoice[i];
+                    //     console.log(currentChoice);
+                    element.style.background = currentChoice[i];
                     // }
                 });
-            } else{
+            } else {
                 return currentChoice;
             }
             break;
         case "a4":
-            if(currentChoice.length<4){
+            if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[4]);
                 bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
-                bolaPintada.forEach((element,i) => {
+                bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                    //     console.log(currentChoice)
-                        element.style.background = currentChoice[i];
+                    //     console.log(currentChoice);
+                    element.style.background = currentChoice[i];
                     // }
                 });
-            } else{
+            } else {
                 return currentChoice;
             }
             break;
         default:
-            if(currentChoice.length<4){
+            if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[5]);
                 bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
-                bolaPintada.forEach((element,i) => {
+                bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                    //     console.log(currentChoice)
-                        element.style.background = currentChoice[i];
+                    //     console.log(currentChoice);
+                    element.style.background = currentChoice[i];
                     // }
                 });
-            } else{
+            } else {
                 return currentChoice;
             }
             break;
-        }
     }
+}
 //Crea las filas del tablero
 let board;
 let row;
@@ -211,41 +223,41 @@ const createRow = () => {
     for (let i = 0; i < 4; i++) {
         hintBall = document.createElement("div");
         hintBall.className = "hintBall";
-        hintBall.id = `row${idRow}-hintBaill${idHintBall}`
+        hintBall.id = `row${idRow}-hintBaill${idHintBall}`;
         hintBalls.appendChild(hintBall);
         idHintBall++;
     }
-    
+
     row.appendChild(balls);
     row.appendChild(hintBalls);
     board.appendChild(row);
     // pintaCurrentRow(row);
 
-    
+
 }
 
 //Pinta el tablero en pantalla dependiendo de la dificultad
 const paintBoard = nRows => {
-    for(let i=0; i<nRows; i++){
+    for (let i = 0; i < nRows; i++) {
         createRow();
     }
 }
 
 //Pinta la fila del tablero
 // const pintaCurrentRow = (row) => {
-    // if(row.id == 'row1'){
-    //     // row.style.background="red";
-    //     let arrBalls = Array.from(document.querySelectorAll('#row1 .ball'));
-    //     console.log(arrBalls)
-    //     arrBalls.forEach((element,i) => {
-            // element.style.background ="blue";
-            // if(currentChoice[i] != undefined){
-            //     console.log(currentChoice)
-            //     element.style.background = currentChoice[i];
-            // }
-        // });
-    // }
+// if(row.id == 'row1'){
+//     // row.style.background="red";
+//     let arrBalls = Array.from(document.querySelectorAll('#row1 .ball'));
+//     console.log(arrBalls);
+//     arrBalls.forEach((element,i) => {
+// element.style.background ="blue";
+// if(currentChoice[i] != undefined){
+//     console.log(currentChoice);
+//     element.style.background = currentChoice[i];
+// }
+// });
+// }
 // }
 paintWinner();
-paintBoard(nRows); 
+paintBoard(nRows);
 paintAvailable();
