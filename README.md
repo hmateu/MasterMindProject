@@ -39,6 +39,9 @@ La página web cuenta con múltiples páginas enlazadas entre ellas, siendo esta
 **Página de juego**
 ![image](./img/gamePage.JPG)
 
+**Versión móvil**
+![image](./img/mastermindMobile.jpg)
+
 ### Licencia y Copyright
 
 Este proyecto se ha realizado bajo la **licencia MIT**.
