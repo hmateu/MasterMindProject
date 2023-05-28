@@ -48,12 +48,22 @@ const paintWinner = () => {
         arrWinnerSquareColours[i].style.border = ".15em solid white";
     }
     let rgbSinParentesis;
+    //Los argumentos para la función que pasa de RGB a Hex
+    let argR;
+    let argG;
+    let argB;
     arrWinnerSquareColours.forEach(element => {
         // console.log(`Colores de winner ${element.style.background}`);
         rgbSinParentesis = element.style.background;
         // console.log(rgbSinParentesis);
-        console.log(rgbSinParentesis.slice(4,-1));
-        // console.log(`Colores de winner${rgbToHex(element.style.background)}`);
+        // console.log(rgbSinParentesis.slice(4,-1).split(","));
+        argR = parseInt(rgbSinParentesis.slice(4,-1).split(",")[0]);
+        argG = parseInt(rgbSinParentesis.slice(4,-1).split(",")[1]);
+        argB = parseInt(rgbSinParentesis.slice(4,-1).split(",")[2]);
+        console.log(argR,argG,argB)
+        // console.log("");
+        console.log(`winnerChoice = ${rgbToHex(argR,argG,argB)}`)
+        // console.log(`Colores de winner${rgbToHex(rgbSinParentesis.slice(4,-1).split(",")[0],rgbSinParentesis.slice(4,-1).split(",")[1],rgbSinParentesis.slice(4,-1).split(",")[2])}`);
     });
 }
 
