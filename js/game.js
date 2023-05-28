@@ -98,6 +98,13 @@ const rowValidate = () => {
             if (winner === currentChoice[i]) {
                 hintBalls[i].style.background = "black";
                 victoria = true;
+            } else {
+                const firstIndex = winnerChoice.findIndex((item) => item === currentChoice[i]);
+                // console.log(currentChoice[i], "-------------")
+                if (firstIndex !== -1 && firstIndex !== i) {
+                    hintBalls[i].style.background = "white";
+                    victoria = false;
+                }
             }
         });
         idDeLaRow += 1;
