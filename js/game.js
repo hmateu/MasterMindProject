@@ -1,5 +1,4 @@
 //Calcula el número de filas que tiene el tablero
-let difficulty = sessionStorage.getItem("difficulty");
 let nRows = sessionStorage.getItem("difficulty");
 const checkButton = document.querySelector(".checkBtn");
 let winnerChoice = [];
@@ -55,17 +54,17 @@ const paintWinner = () => {
     let argR;
     let argG;
     let argB;
-    arrWinnerSquareColours.forEach((element,i) => {
+    arrWinnerSquareColours.forEach((element, i) => {
         // console.log(`winnerChoice = ${element.style.background}`);
         rgbSinParentesis = element.style.background;
         // console.log(rgbSinParentesis);
         // console.log(rgbSinParentesis.slice(4,-1).split(","));
-        argR = parseInt(rgbSinParentesis.slice(4,-1).split(",")[0]);
-        argG = parseInt(rgbSinParentesis.slice(4,-1).split(",")[1]);
-        argB = parseInt(rgbSinParentesis.slice(4,-1).split(",")[2]);
+        argR = parseInt(rgbSinParentesis.slice(4, -1).split(",")[0]);
+        argG = parseInt(rgbSinParentesis.slice(4, -1).split(",")[1]);
+        argB = parseInt(rgbSinParentesis.slice(4, -1).split(",")[2]);
         // console.log("winnerChoice = ",argR,argG,argB)
         // console.log("");
-        rgbToHexadecimal = rgbToHex(argR,argG,argB);
+        rgbToHexadecimal = rgbToHex(argR, argG, argB);
         // console.log("tipo de winnerChoice cuando lo transformo a Hexadecimal",rgbToHexadecimal);
         winnerChoice.push(rgbToHexadecimal);
         // console.log(`winnerChoice = ${rgbToHex(argR,argG,argB)}`);
@@ -84,86 +83,41 @@ const paintAvailable = () => {
     });
 }
 
-// Valida la fila que se ha completado en el tablero y cambia a la siguiente
+let victoria = false;
 const rowValidate = () => {
-    // for(let i = 1; i<=nRows; i++){
-    //     console.log("---------------------------------------- Esta es la i",i);
-    // }
-    // console.log(currentChoice);
     console.log(idDeLaRow < nRows);
+
     if (idDeLaRow < nRows) {
-        // Comparaciones
-        
-        // console.log("----------------");
-        // console.log(`Winner = ${winnerChoice}`);
-        // console.log(`Current = ${currentChoice}`);
-        // console.log("----------------");
+        console.log("----------------");
+        console.log(`Winner = ${winnerChoice}`);
+        console.log(`Current = ${currentChoice}`);
+        console.log("----------------");
 
-        // Aciertos en cada jugada
-        let matchBall = [];
-        // Bola acertada en ubicación incorrecta
-        let wrongPositionBall = [];
-        //Cada acierto de bola en su ubicación correcta suma 1. Si llega a 4 es porque ha ganado
-        let successBall = 0;
-        // Cada acierto de bola que no este en su ubicación corecta suma 1
-        let unsuccessBall = 0;
-        // Guarda la posición de la bola que se ha acertado
-        let whenMatch = [];
-        // Guarda la posición de la bola que se ha acertado el color pero no la posición
-        let whenUnMatch = [];
-
-       
-        console.log(">> Empiezan las comparaciones <<");
-        console.log(`winnerChoice = ${winnerChoice}`);
-        console.log(`currentChoice = ${currentChoice}`);
-        console.log("");        
-        winnerChoice.forEach((element,i) => {
-            if(element == currentChoice[i]){
-                console.log(`winnerChoice[${i}] = ${element}`);
-                console.log(`currentChoice[${i}] = ${currentChoice[i]}`);
-                console.log("¡¡ MATCH !!");
-                console.log("");
-                matchBall[i] = true;
-                successBall++;
-            }else{
-                console.log(`winnerChoice[${i}] = ${element}`);
-                console.log(`currentChoice[${i}] = ${currentChoice[i]}`);
-                console.log("NO MATCH");
-                console.log("");
-                unsuccessBall++;
+        const hintBalls = Array.from(document.querySelectorAll(`#row${idDeLaRow} .hintBalls .hintBall`));
+        winnerChoice.forEach((winner, i) => {
+            if (winner === currentChoice[i]) {
+                hintBalls[i].style.background = "black";
+                victoria = true;
             }
-            // else{
-            //     if(winnerChoice.includes(currentChoice[i])){
-            //         console.log(`El color ${currentChoice[i]} se encuentra en la winnerChoice`);
-            //     }
-            // }
-        })
-        console.log(">> Terminan las comparaciones <<");
-
-        if(successBall == 4){
-            alert("Has ganado");
-        }
-
-        matchBall.forEach((element,i) => {
-            if(element == true){
-                whenMatch.push(i);
-            }
-        })
-
-        console.log(`Hay ${whenMatch.length} bola/s en la posición correcta`);
-        console.log(`Hay ${unsuccessBall} bola/s en una posición diferente`);
-
-        //Fin comparaciones
+        });
         idDeLaRow += 1;
         currentChoice = [];
         checkButton.classList.add("disabled");
+        if (idDeLaRow == nRows) {
+            if (victoria) {
+                alert("¡Has ganado!");
+            } else {
+                alert("Has perdido...");
+            }
+        } else {
+            if (victoria) {
+                alert("¡Has ganado!");
+            }
+        }
 
         return idDeLaRow;
-
     }
-
-}
-
+};
 let idDeLaRow = 0;
 // rowValidate();
 //Captura el color que pulsa el usuario y lo guarda en la combinación que ha hecho el usuario
@@ -187,7 +141,7 @@ const createCurrentChoice = (id) => {
                 bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                        // console.log(currentChoice);
+                    // console.log(currentChoice);
                     element.style.background = currentChoice[i];
                     // }
                 });
