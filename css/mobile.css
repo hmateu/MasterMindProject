@@ -185,7 +185,10 @@ a {
     border: none;
 }
 /* Colours - Picker Colour */
-
+#winnerChoice .titleArrColours,
+.showColours .winnerChoiceArr{
+    display: none;
+}
 /*---------------------------------------------- REVISADO -----------------------------------------------*/
 
 input {
