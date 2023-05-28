@@ -1,4 +1,5 @@
 //Calcula el número de filas que tiene el tablero
+let difficulty = sessionStorage.getItem("difficulty");
 let nRows = sessionStorage.getItem("difficulty");
 const checkButton = document.querySelector(".checkBtn");
 let winnerChoice = [];
@@ -37,10 +38,10 @@ const paintWinner = () => {
     let winnerSquareColours = document.getElementsByClassName("winnerChoiceClass");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
 
-    console.log(`Números aleatorios = ${calculateRandom()}`);
-    console.log("___________")
-    console.log(`Elemento de availableColours ${availableColours}`);
-    console.log("___________")
+    // console.log(`Números aleatorios = ${calculateRandom()}`);
+    // console.log("___________")
+    // console.log(`Elemento de availableColours ${availableColours}`);
+    // console.log("___________")
     for (let i = 0; i < 4; i++) {
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
         // console.log(arrWinnerSquareColours,"------------------------------");
@@ -93,11 +94,65 @@ const rowValidate = () => {
     if (idDeLaRow < nRows) {
         // Comparaciones
         
-        console.log("----------------");
-        console.log(`Winner = ${winnerChoice}`);
-        console.log(`Current = ${currentChoice}`);
-        console.log("----------------");
-    
+        // console.log("----------------");
+        // console.log(`Winner = ${winnerChoice}`);
+        // console.log(`Current = ${currentChoice}`);
+        // console.log("----------------");
+
+        // Aciertos en cada jugada
+        let matchBall = [];
+        // Bola acertada en ubicación incorrecta
+        let wrongPositionBall = [];
+        //Cada acierto de bola en su ubicación correcta suma 1. Si llega a 4 es porque ha ganado
+        let successBall = 0;
+        // Cada acierto de bola que no este en su ubicación corecta suma 1
+        let unsuccessBall = 0;
+        // Guarda la posición de la bola que se ha acertado
+        let whenMatch = [];
+        // Guarda la posición de la bola que se ha acertado el color pero no la posición
+        let whenUnMatch = [];
+
+       
+        console.log(">> Empiezan las comparaciones <<");
+        console.log(`winnerChoice = ${winnerChoice}`);
+        console.log(`currentChoice = ${currentChoice}`);
+        console.log("");        
+        winnerChoice.forEach((element,i) => {
+            if(element == currentChoice[i]){
+                console.log(`winnerChoice[${i}] = ${element}`);
+                console.log(`currentChoice[${i}] = ${currentChoice[i]}`);
+                console.log("¡¡ MATCH !!");
+                console.log("");
+                matchBall[i] = true;
+                successBall++;
+            }else{
+                console.log(`winnerChoice[${i}] = ${element}`);
+                console.log(`currentChoice[${i}] = ${currentChoice[i]}`);
+                console.log("NO MATCH");
+                console.log("");
+                unsuccessBall++;
+            }
+            // else{
+            //     if(winnerChoice.includes(currentChoice[i])){
+            //         console.log(`El color ${currentChoice[i]} se encuentra en la winnerChoice`);
+            //     }
+            // }
+        })
+        console.log(">> Terminan las comparaciones <<");
+
+        if(successBall == 4){
+            alert("Has ganado");
+        }
+
+        matchBall.forEach((element,i) => {
+            if(element == true){
+                whenMatch.push(i);
+            }
+        })
+
+        console.log(`Hay ${whenMatch.length} bola/s en la posición correcta`);
+        console.log(`Hay ${unsuccessBall} bola/s en una posición diferente`);
+
         //Fin comparaciones
         idDeLaRow += 1;
         currentChoice = [];
