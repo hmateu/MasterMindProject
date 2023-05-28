@@ -84,6 +84,7 @@ const paintAvailable = () => {
 }
 
 let victoria = false;
+let successBall = 0;
 const rowValidate = () => {
     console.log(idDeLaRow < nRows);
 
@@ -94,9 +95,11 @@ const rowValidate = () => {
         console.log("----------------");
 
         const hintBalls = Array.from(document.querySelectorAll(`#row${idDeLaRow} .hintBalls .hintBall`));
+        successBall = 0;
         winnerChoice.forEach((winner, i) => {
             if (winner === currentChoice[i]) {
                 hintBalls[i].style.background = "black";
+                successBall++;
                 victoria = true;
             } else {
                 const firstIndex = winnerChoice.findIndex((item) => item === currentChoice[i]);
@@ -111,13 +114,13 @@ const rowValidate = () => {
         currentChoice = [];
         checkButton.classList.add("disabled");
         if (idDeLaRow == nRows) {
-            if (victoria) {
+            if (victoria && successBall == 4) {
                 alert("¡Has ganado!");
             } else {
                 alert("Has perdido...");
             }
         } else {
-            if (victoria) {
+            if (victoria && successBall == 4) {
                 alert("¡Has ganado!");
             }
         }
