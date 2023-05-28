@@ -16,7 +16,10 @@ body {
 a {
     text-decoration: none;
 }
-
+.disabled{
+    opacity: 0.4;
+    pointer-events: none;
+}
 .container {
     display: flex;
     flex-direction: column;

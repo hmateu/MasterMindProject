@@ -1,5 +1,7 @@
 //Calcula el número de filas que tiene el tablero
 let nRows = sessionStorage.getItem("difficulty");
+const checkButton =  document.querySelector(".checkBtn");
+let winnerChoise = []
 switch (nRows) {
     case "easy":
         nRows = 10;
@@ -33,6 +35,7 @@ const paintWinner = () => {
     for(let i = 0; i < 4; i++){
             // console.log(`Elemento de availableColours ${availableColours[i]}`);
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
+        winnerChoise.push(availableColours[calculateRandom()[i]])
         arrWinnerSquareColours[i].style.border = ".15em solid white";
     }
 }
@@ -51,18 +54,34 @@ const rowValidate = () => {
     // for(let i = 1; i<=nRows; i++){
         //     console.log("---------------------------------------- Esta es la i",i);
         // }
-        
+        console.log(currentChoice)
+        console.log(idDeLaRow < nRows)
         if(idDeLaRow < nRows){
+            // Comparaciones
+            idDeLaRow+=1;
+            currentChoice = []
+            checkButton.classList.add("disabled")
+
             return idDeLaRow;
-            idDeLaRow++;
+          
         }
+       
     }
+    
     let idDeLaRow = 0;
-rowValidate();
+// rowValidate();
 //Captura el color que pulsa el usuario y lo guarda en la combinación que ha hecho el usuario
 let currentChoice = [];
 let bolaPintada;
 const createCurrentChoice = (id) => {
+    console.log(currentChoice)
+    if (currentChoice.length < 3) {
+        checkButton.classList.add("disabled")
+    
+    }else{
+        checkButton.classList.remove("disabled")
+    
+    }
     switch (id) {
         case "a0":
             if(currentChoice.length<4){
