@@ -35,7 +35,7 @@ const calculateRandom = () => {
 const paintWinner = () => {
     // let winnerSquareColours = document.querySelectorAll(".winnerChoiceArr .colorSquare");
     // let arrWinnerSquareColours = Array.from(winnerSquareColours);
-    let winnerSquareColours = document.getElementsByClassName("winnerChoiseClass");
+    let winnerSquareColours = document.getElementsByClassName("winnerChoiceClass");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
 
     //Asigna colores aleatoriamente al array de combinación ganadora

@@ -1,7 +1,7 @@
 //Calcula el número de filas que tiene el tablero
 let nRows = sessionStorage.getItem("difficulty");
 const checkButton = document.querySelector(".checkBtn");
-let winnerChoise = [];
+let winnerChoice = [];
 switch (nRows) {
     case "easy":
         nRows = 10;
@@ -34,7 +34,7 @@ const rgbToHex = (r, g, b) => {
 }
 //Pinta la combinación ganadora
 const paintWinner = () => {
-    let winnerSquareColours = document.getElementsByClassName("winnerChoiseClass");
+    let winnerSquareColours = document.getElementsByClassName("winnerChoiceClass");
     let arrWinnerSquareColours = Array.from(winnerSquareColours);
 
     console.log(`Números aleatorios = ${calculateRandom()}`);
@@ -44,15 +44,17 @@ const paintWinner = () => {
     for (let i = 0; i < 4; i++) {
         arrWinnerSquareColours[i].style.background = availableColours[calculateRandom()[i]];
         // console.log(arrWinnerSquareColours,"------------------------------");
-        // winnerChoise[i] = arrWinnerSquareColours[i];
+        // winnerChoice[i] = arrWinnerSquareColours[i];
         arrWinnerSquareColours[i].style.border = ".15em solid white";
     }
     let rgbSinParentesis;
+    // Cada color del RGB pasado a Hexadecimal para después rellenar el array winnerChoice
+    let rgbToHexadecimal;
     //Los argumentos para la función que pasa de RGB a Hex
     let argR;
     let argG;
     let argB;
-    arrWinnerSquareColours.forEach(element => {
+    arrWinnerSquareColours.forEach((element,i) => {
         // console.log(`winnerChoice = ${element.style.background}`);
         rgbSinParentesis = element.style.background;
         // console.log(rgbSinParentesis);
@@ -62,7 +64,10 @@ const paintWinner = () => {
         argB = parseInt(rgbSinParentesis.slice(4,-1).split(",")[2]);
         // console.log("winnerChoice = ",argR,argG,argB)
         // console.log("");
-        console.log(`winnerChoice = ${rgbToHex(argR,argG,argB)}`)
+        rgbToHexadecimal = rgbToHex(argR,argG,argB);
+        // console.log("tipo de winnerChoice cuando lo transformo a Hexadecimal",rgbToHexadecimal);
+        winnerChoice.push(rgbToHexadecimal);
+        // console.log(`winnerChoice = ${rgbToHex(argR,argG,argB)}`);
         // console.log("")
         // console.log(`Colores de winner${rgbToHex(rgbSinParentesis.slice(4,-1).split(",")[0],rgbSinParentesis.slice(4,-1).split(",")[1],rgbSinParentesis.slice(4,-1).split(",")[2])}`);
     });
@@ -77,6 +82,7 @@ const paintAvailable = () => {
         arrAvailableSquareColours[i].style.border = ".15em solid white";
     });
 }
+
 // Valida la fila que se ha completado en el tablero y cambia a la siguiente
 const rowValidate = () => {
     // for(let i = 1; i<=nRows; i++){
@@ -86,12 +92,12 @@ const rowValidate = () => {
     console.log(idDeLaRow < nRows);
     if (idDeLaRow < nRows) {
         // Comparaciones
-        // winnerChoise.forEach((element, i) => {
-        //     console.log(`winnerChoise ${i} es el ${element}`);
-        // })
-        currentChoice.forEach((element, i) => {
-            console.log(`currrentChoice ${i} es el ${element}`);
-        })
+        
+        console.log("----------------");
+        console.log(`Winner = ${winnerChoice}`);
+        console.log(`Current = ${currentChoice}`);
+        console.log("----------------");
+    
         //Fin comparaciones
         idDeLaRow += 1;
         currentChoice = [];
@@ -281,6 +287,7 @@ const paintBoard = nRows => {
 // });
 // }
 // }
-paintWinner();
+
 paintBoard(nRows);
 paintAvailable();
+paintWinner();
