@@ -24,7 +24,14 @@ const calculateRandom = () => {
     }
     return randomNumber;
 }
-
+//Pasar de RGB a Hexadecimal
+const componentToHex = (c) => {
+    let hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+}
+const rgbToHex = (r, g, b) => {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 //Pinta la combinación ganadora
 const paintWinner = () => {
     let winnerSquareColours = document.getElementsByClassName("winnerChoiseClass");
@@ -40,8 +47,13 @@ const paintWinner = () => {
         // winnerChoise[i] = arrWinnerSquareColours[i];
         arrWinnerSquareColours[i].style.border = ".15em solid white";
     }
+    let rgbSinParentesis;
     arrWinnerSquareColours.forEach(element => {
-        console.log(element.style.background)
+        // console.log(`Colores de winner ${element.style.background}`);
+        rgbSinParentesis = element.style.background;
+        // console.log(rgbSinParentesis);
+        console.log(rgbSinParentesis.slice(4,-1));
+        // console.log(`Colores de winner${rgbToHex(element.style.background)}`);
     });
 }
 
