@@ -95,13 +95,13 @@ const rowValidate = () => {
         checkButton.classList.add("disabled");
         if (idDeLaRow == nRows) {
             if (victoria && successBall == 4) {
-                alert("¡Has ganado!");
+                window.location.href="../pages/winner.html"
             } else {
-                alert("Has perdido...");
+                window.location.href="../pages/gameOver.html"
             }
         } else {
             if (victoria && successBall == 4) {
-                alert("¡Has ganado!");
+                window.location.href="../pages/winner.html"
             }
         }
         return idDeLaRow;
