@@ -27,8 +27,17 @@ Para la realización de este proyecto he utlizado HTML5, CSS3 y Javascript. Sien
 
 La página web cuenta con múltiples páginas enlazadas entre ellas, siendo estas la página principal, la de introducción del nombre y elección de niveles, elección de colores, el propio juego, sobre mí, cómo jugar, la enhorabuena al ganador y la de game over. A continuación, una captura de cada una de las páginas.
 
-**Página de Inicio.**
+**Página de Inicio**
 ![image](./img/homePage.JPG)
+
+**Página de Niveles**
+![image](./img/levelsPage.JPG)
+
+**Página de Colores**
+![image](./img/coloursPage.JPG)
+
+**Página de juego**
+![image](./img/gamePage.JPG)
 
 ### Licencia y Copyright
 
