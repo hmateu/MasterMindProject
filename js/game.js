@@ -53,16 +53,17 @@ const paintWinner = () => {
     let argG;
     let argB;
     arrWinnerSquareColours.forEach(element => {
-        // console.log(`Colores de winner ${element.style.background}`);
+        // console.log(`winnerChoice = ${element.style.background}`);
         rgbSinParentesis = element.style.background;
         // console.log(rgbSinParentesis);
         // console.log(rgbSinParentesis.slice(4,-1).split(","));
         argR = parseInt(rgbSinParentesis.slice(4,-1).split(",")[0]);
         argG = parseInt(rgbSinParentesis.slice(4,-1).split(",")[1]);
         argB = parseInt(rgbSinParentesis.slice(4,-1).split(",")[2]);
-        console.log(argR,argG,argB)
+        // console.log("winnerChoice = ",argR,argG,argB)
         // console.log("");
         console.log(`winnerChoice = ${rgbToHex(argR,argG,argB)}`)
+        // console.log("")
         // console.log(`Colores de winner${rgbToHex(rgbSinParentesis.slice(4,-1).split(",")[0],rgbSinParentesis.slice(4,-1).split(",")[1],rgbSinParentesis.slice(4,-1).split(",")[2])}`);
     });
 }
@@ -81,13 +82,13 @@ const rowValidate = () => {
     // for(let i = 1; i<=nRows; i++){
     //     console.log("---------------------------------------- Esta es la i",i);
     // }
-    console.log(currentChoice);
+    // console.log(currentChoice);
     console.log(idDeLaRow < nRows);
     if (idDeLaRow < nRows) {
         // Comparaciones
-        winnerChoise.forEach((element, i) => {
-            console.log(`winnerChoise ${i} es el ${element}`);
-        })
+        // winnerChoise.forEach((element, i) => {
+        //     console.log(`winnerChoise ${i} es el ${element}`);
+        // })
         currentChoice.forEach((element, i) => {
             console.log(`currrentChoice ${i} es el ${element}`);
         })
@@ -108,7 +109,7 @@ let idDeLaRow = 0;
 let currentChoice = [];
 let bolaPintada;
 const createCurrentChoice = (id) => {
-    console.log(currentChoice);
+    // console.log("***",currentChoice);
     if (currentChoice.length < 3) {
         checkButton.classList.add("disabled");
 
@@ -125,7 +126,7 @@ const createCurrentChoice = (id) => {
                 bolaPintada.forEach((element, i) => {
                     // element.style.background ="blue";
                     // if(currentChoice[i] != undefined){
-                    //     console.log(currentChoice);
+                        // console.log(currentChoice);
                     element.style.background = currentChoice[i];
                     // }
                 });
