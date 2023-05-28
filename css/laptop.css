@@ -64,6 +64,10 @@
         column-gap: 1em;
     }
 
+    .sectionText a{
+        color: rgb(115, 243, 252);
+    }
+
     /* Level */
     .formLabel {
         font-size: 2em;

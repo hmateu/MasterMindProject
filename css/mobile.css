@@ -33,26 +33,36 @@ a {
 .playGame {
     background-color: rgb(255, 0, 191);
     border: .01em solid white;
+    transition: background-color 0.3s;
 }
 
 .playGame:hover {
-    background-color: rgb(168, 30, 134);
+    /* background-color: rgb(168, 30, 134); */
+    background-color: transparent;
 }
 
 .howToPlay,
 .developer {
-    background-color: rgb(24, 117, 82);
-    border: .01em solid white;
+    /* background-color: rgb(24, 117, 82); */
+    border: .1em solid white;
+    transition: background-color 0.3s;
+
 }
 
 .howToPlay:hover,
 .developer:hover {
-    background-color: rgb(31, 83, 63);
+    /* background-color: rgb(31, 83, 63); */
+    background-color: rgb(255, 0, 191);
 }
 
 /* How to play */
 .sectionTitle {
     border-bottom: .1em solid white;
+}
+
+.sectionText a{
+    border-bottom: .1em solid white;
+    cursor: pointer;
 }
 
 .bodySection {
@@ -304,6 +314,10 @@ input {
     .sectionTitle {
         width: 90vw;
         font-size: 1.2em;
+    }
+
+    .sectionText a{
+        color: rgb(252, 115, 195);
     }
 
     .section {
