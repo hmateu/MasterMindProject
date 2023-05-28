@@ -16,10 +16,12 @@ body {
 a {
     text-decoration: none;
 }
-.disabled{
+
+.disabled {
     opacity: 0.4;
     pointer-events: none;
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -34,19 +36,17 @@ a {
 }
 
 .playGame {
-    background-color: rgb(255, 0, 191);
-    border: .01em solid white;
+    background-color: rgba(23, 22, 110, 0.726);
+    border: .2em solid white;
     transition: background-color 0.3s;
 }
 
 .playGame:hover {
-    /* background-color: rgb(168, 30, 134); */
     background-color: transparent;
 }
 
 .howToPlay,
 .developer {
-    /* background-color: rgb(24, 117, 82); */
     border: .1em solid white;
     transition: background-color 0.3s;
 
@@ -54,8 +54,7 @@ a {
 
 .howToPlay:hover,
 .developer:hover {
-    /* background-color: rgb(31, 83, 63); */
-    background-color: rgb(255, 0, 191);
+    background-color: rgba(23, 22, 110, 0.726);
 }
 
 /* How to play */
@@ -63,7 +62,7 @@ a {
     border-bottom: .1em solid white;
 }
 
-.sectionText a{
+.sectionText a {
     border-bottom: .1em solid white;
     cursor: pointer;
 }
@@ -85,12 +84,16 @@ a {
     display: flex;
     align-items: center;
     text-align: center;
-    background-color: rgb(168, 30, 134);
-    border: .2em solid rgb(255, 0, 191);
+    border: .2em solid white;
+}
+
+.lvlInputBtn {
+    border: .1em solid white;
+    transition: background-color 0.3s;
 }
 
 .lvlInputBtn:hover {
-    background-color: rgb(31, 83, 63);
+    background-color: rgb(23, 22, 110);
 }
 
 .levelBtn {
@@ -101,27 +104,33 @@ a {
 
 
 .easyLevel {
-    background-color: rgb(24, 117, 82);
+    border: .2em solid white;
+    transition: background-color 0.3s;
 }
 
 .easyLevel:hover {
-    background-color: rgb(31, 83, 63);
+    background-color: rgba(255, 247, 0, 0.6);
+    transition: background-color 0.3s;
 }
 
 .mediumLevel {
-    background-color: rgb(255, 174, 0);
+    border: .2em solid white;
+    transition: background-color 0.3s;
 }
 
 .mediumLevel:hover {
-    background-color: rgb(167, 122, 27);
+    background-color: rgba(229, 68, 71, 0.6);
+    transition: background-color 0.3s;
 }
 
 .hardLevel {
-    background-color: rgb(255, 0, 191);
+    border: .2em solid white;
+    transition: background-color 0.3s;
 }
 
 .hardLevel:hover {
-    background-color: rgb(168, 30, 134);
+    background-color: rgba(182, 3, 253, 0.6);
+    transition: background-color 0.3s;
 }
 
 /* Colours */
@@ -150,15 +159,17 @@ a {
     display: flex;
     align-items: center;
     text-align: center;
-}
-
-.playBtn {
-    background-color: rgb(255, 0, 191);
     cursor: pointer;
 }
 
+.playBtn {
+    border: .2em solid white;
+    transition: background-color 0.3s;
+}
+
 .playBtn:hover {
-    background-color: rgb(168, 30, 134);
+    background-color: rgb(23, 22, 110);
+    transition: background-color 0.3s;
 }
 
 /* Colours - Picker Colour */
@@ -184,18 +195,16 @@ a {
 .inputColours::-moz-color-swatch {
     border: none;
 }
+
 /* Colours - Picker Colour */
 #winnerChoice .titleArrColours,
-.showColours .winnerChoiceArr{
+.showColours .winnerChoiceArr {
     display: none;
 }
-/*---------------------------------------------- REVISADO -----------------------------------------------*/
 
 input {
     color: black;
 }
-
-
 
 .inputName {
     border: .1em solid white;
@@ -205,7 +214,6 @@ input {
 }
 
 .lvlInputBtn {
-    background-color: rgb(24, 117, 82);
     /* color: white; */
     border-radius: .7em;
     display: flex;
@@ -216,19 +224,20 @@ input {
 }
 
 .checkBtn {
-    background-color: rgb(24, 117, 82);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 1.5em;
+    border: .2em solid white;
+    transition: background-color 0.3s;
+    background-color: rgb(247, 0, 255);
 }
 
 .checkBtn:hover {
-    background-color: rgb(31, 83, 63);
+    transition: background-color 0.3s;
+    background-color: transparent;
 }
-
-
 
 .colour {
     height: 1em;
@@ -262,7 +271,6 @@ input {
 }
 
 /* Vista móvil */
-/* @media (max-width:576px) { */
 @media (max-width:1199px) {
 
     /* Home page */
@@ -272,7 +280,7 @@ input {
         margin-bottom: 2em;
     }
 
-    .logo{
+    .logo {
         font-size: 3em;
         letter-spacing: 0.1em;
     }
@@ -322,7 +330,7 @@ input {
         font-size: 1.2em;
     }
 
-    .sectionText a{
+    .sectionText a {
         color: rgb(252, 115, 195);
     }
 
@@ -362,7 +370,7 @@ input {
         font-size: 2em;
         height: 3em;
     }
-    
+
     .messageUser {
         font-size: 1.7em;
         border-radius: .5em;
@@ -370,12 +378,12 @@ input {
         width: 11em;
         margin-top: .1em;
     }
-    
+
     /* Colours */
     .colourBody {
         row-gap: 0em;
     }
-    
+
     .coloursTitle {
         font-size: 1.5em;
         width: 10em;
@@ -403,16 +411,16 @@ input {
         justify-content: space-around;
         column-gap: 2em;
     }
-    
+
     .mediumDifficulty .selectColour {
         column-gap: 2em;
         margin-bottom: -1em;
     }
-    
+
     .hardDifficulty .selectColour {
         column-gap: 1em;
     }
-    
+
     .mediumDifficulty .inputColour {
         display: flex;
         column-gap: 7em;
@@ -425,49 +433,6 @@ input {
         border-radius: .5em;
         margin-top: 1.5em;
     }
-    /*---------------------------------------------- REVISADO -----------------------------------------------*/
-    
-    
-    
-    
-
-
-
-
-
-    
-
-    /* .inputColour {
-        display: flex;
-        justify-content: center;
-        column-gap: 1.5em;
-    } */
-
-    /* .colour {
-        height: 5em;
-        width: 5em;
-        border: .1em solid black;
-        border-radius: 50%;
-    } */
-
-    
-
-    /* .inputColours { */
-        /* display: flex;
-        padding: 0;
-        height: 3em;
-        width: 3em;
-        border-radius: .2em; */
-        /* border: .1em solid black; */
-    /* } */
-
-    
-
-
-
-
-
-    
 
     /*Diseño del tablero*/
     .gameBoard {
@@ -516,7 +481,6 @@ input {
         margin-left: 3.5em;
         height: 2em;
         width: 6em;
-        border: .15em solid rgb(121, 218, 180);
         border-radius: .5em;
     }
 }

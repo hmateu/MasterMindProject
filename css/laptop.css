@@ -2,12 +2,11 @@
 
     /* Home page */
     .navBar {
-        /* height: 17vh; */
         margin-top: 2em;
         margin-bottom: 2em;
     }
 
-    .logo{
+    .logo {
         font-size: 10em;
         letter-spacing: 0.1em;
     }
@@ -16,7 +15,6 @@
     .indexBody {
         row-gap: 2em;
     }
-
 
     .homeImg {
         height: 10em;
@@ -64,7 +62,7 @@
         column-gap: 1em;
     }
 
-    .sectionText a{
+    .sectionText a {
         color: rgb(115, 243, 252);
     }
 
@@ -77,7 +75,6 @@
         height: 2em;
         width: 11.5em;
         font-size: 1.4em;
-
     }
 
     .lvlInputBtn {
@@ -104,7 +101,6 @@
     /* Colours */
     .coloursTitle {
         font-size: 1.5em;
-        /* margin-bottom: 1em; */
     }
 
     .easyDifficulty {
@@ -123,15 +119,6 @@
         flex-direction: column;
         row-gap: .5em;
     }
-
-    /* .inputColours {
-        display: flex;
-        padding: 0;
-        height: 3em;
-        width: 3em;
-        border-radius: .2em;
-        border: .1em solid black;
-    } */
 
     .selectColour {
         display: flex;
@@ -156,11 +143,6 @@
         column-gap: 1.5em;
     }
 
-    /* .mediumDifficulty .inputColour {
-        display: flex;
-        column-gap: 9em;
-    } */
-
     .playBtn {
         display: flex;
         justify-content: center;
@@ -170,46 +152,6 @@
         border-radius: .5em;
         margin-top: 1em;
     }
-    
-    /* .colour {
-        height: 5em;
-        width: 5em;
-        border: .1em solid black;
-        border-radius: 50%;
-    } */
-    /*---------------------------------------------- REVISADO -----------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .checkBtn {
         margin-top: 1em;
@@ -217,7 +159,6 @@
         font-size: 1.3em;
         height: 2em;
         width: 10em;
-        border: .15em solid rgb(121, 218, 180);
         border-radius: .5em;
     }
 
