@@ -89,10 +89,10 @@ const rowValidate = () => {
     console.log(idDeLaRow < nRows);
 
     if (idDeLaRow < nRows) {
-        console.log("----------------");
-        console.log(`Winner = ${winnerChoice}`);
-        console.log(`Current = ${currentChoice}`);
-        console.log("----------------");
+        // console.log("----------------");
+        // console.log(`Winner = ${winnerChoice}`);
+        // console.log(`Current = ${currentChoice}`);
+        // console.log("----------------");
 
         const hintBalls = Array.from(document.querySelectorAll(`#row${idDeLaRow} .hintBalls .hintBall`));
         successBall = 0;
