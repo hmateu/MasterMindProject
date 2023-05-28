@@ -49,11 +49,20 @@ const paintAvailable = () => {
 
 //Captura el color que pulsa el usuario y lo guarda en la combinación que ha hecho el usuario
 let currentChoice = [];
+let bolaPintada;
 const createCurrentChoice = (id) => {
     switch (id) {
         case "a0":
             if(currentChoice.length<4){
                 currentChoice.push(availableColours[0])
+                bolaPintada = Array.from(document.querySelectorAll('#row0 .ball'));
+                bolaPintada.forEach((element,i) => {
+                    // element.style.background ="blue";
+                    // if(currentChoice[i] != undefined){
+                    //     console.log(currentChoice)
+                        element.style.background = currentChoice[i];
+                    // }
+                });
             }else{
                 return currentChoice;
             } 
@@ -61,6 +70,14 @@ const createCurrentChoice = (id) => {
         case "a1":
             if(currentChoice.length<4){
                 currentChoice.push(availableColours[1]);
+                bolaPintada = Array.from(document.querySelectorAll('#row0 .ball'));
+                bolaPintada.forEach((element,i) => {
+                    // element.style.background ="blue";
+                    // if(currentChoice[i] != undefined){
+                    //     console.log(currentChoice)
+                        element.style.background = currentChoice[i];
+                    // }
+                });
             } else{
                 return currentChoice;
             }
@@ -68,6 +85,14 @@ const createCurrentChoice = (id) => {
         case "a2":
             if(currentChoice.length<4){
                 currentChoice.push(availableColours[2]);
+                bolaPintada = Array.from(document.querySelectorAll('#row0 .ball'));
+                bolaPintada.forEach((element,i) => {
+                    // element.style.background ="blue";
+                    // if(currentChoice[i] != undefined){
+                    //     console.log(currentChoice)
+                        element.style.background = currentChoice[i];
+                    // }
+                });
             } else{
                 return currentChoice;
             }
@@ -75,6 +100,14 @@ const createCurrentChoice = (id) => {
         case "a3":
             if(currentChoice.length<4){
                 currentChoice.push(availableColours[3]);
+                bolaPintada = Array.from(document.querySelectorAll('#row0 .ball'));
+                bolaPintada.forEach((element,i) => {
+                    // element.style.background ="blue";
+                    // if(currentChoice[i] != undefined){
+                    //     console.log(currentChoice)
+                        element.style.background = currentChoice[i];
+                    // }
+                });
             } else{
                 return currentChoice;
             }
@@ -82,6 +115,14 @@ const createCurrentChoice = (id) => {
         case "a4":
             if(currentChoice.length<4){
                 currentChoice.push(availableColours[4]);
+                bolaPintada = Array.from(document.querySelectorAll('#row0 .ball'));
+                bolaPintada.forEach((element,i) => {
+                    // element.style.background ="blue";
+                    // if(currentChoice[i] != undefined){
+                    //     console.log(currentChoice)
+                        element.style.background = currentChoice[i];
+                    // }
+                });
             } else{
                 return currentChoice;
             }
@@ -89,12 +130,20 @@ const createCurrentChoice = (id) => {
         default:
             if(currentChoice.length<4){
                 currentChoice.push(availableColours[5]);
+                bolaPintada = Array.from(document.querySelectorAll('#row0 .ball'));
+                bolaPintada.forEach((element,i) => {
+                    // element.style.background ="blue";
+                    // if(currentChoice[i] != undefined){
+                    //     console.log(currentChoice)
+                        element.style.background = currentChoice[i];
+                    // }
+                });
             } else{
                 return currentChoice;
             }
             break;
         }
-        console.log(currentChoice);
+        // console.log(currentChoice);
     }
 //Crea las filas del tablero
 let board;
@@ -154,15 +203,15 @@ const paintBoard = nRows => {
 //Pinta la fila del tablero
 const pintaCurrentRow = (row) => {
     if(row.id == 'row0'){
-        row.style.background="red";
+        // row.style.background="red";
         let arrBalls = Array.from(document.querySelectorAll('#row0 .ball'));
         console.log(arrBalls)
         arrBalls.forEach((element,i) => {
             // element.style.background ="blue";
-            if(currentChoice[i] != undefined){
-                console.log(currentChoice)
-                element.style.background = currentChoice[i];
-            }
+            // if(currentChoice[i] != undefined){
+            //     console.log(currentChoice)
+            //     element.style.background = currentChoice[i];
+            // }
         });
     }
 }
