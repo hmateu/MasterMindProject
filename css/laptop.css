@@ -2,12 +2,11 @@
 
     /* Home page */
     .navBar {
-        margin-top: 2em;
-        margin-bottom: 2em;
+        margin-top: -2em;
     }
 
     .logo {
-        font-size: 10em;
+        font-size: 9em;
         letter-spacing: 0.1em;
     }
 
@@ -62,6 +61,10 @@
         column-gap: 1em;
     }
 
+    .bottomSection{
+        margin-top: -1em;
+    }
+
     .sectionText a {
         color: rgb(115, 243, 252);
     }
@@ -88,7 +91,7 @@
         border-radius: .5em;
         height: 4em;
         width: 11em;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     .levelBtn {
@@ -181,4 +184,8 @@
         margin-right: 6em;
     }
 
+}
+
+.hidden {
+    display: none;
 }

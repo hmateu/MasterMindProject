@@ -1,3 +1,4 @@
+// Muestra la elección de colores según la dificultad elegida
 let difficulty = window.sessionStorage.getItem("difficulty");
 if(difficulty == "easy"){
     document.getElementById("easy").classList.remove("hidden");
@@ -7,17 +8,9 @@ if(difficulty == "easy"){
     document.getElementById("hard").classList.remove("hidden");
 }
 
-
 //Color Picker
 const colorPickers = document.querySelectorAll(`#${difficulty} .inputColours`);
 const colorBall = document.querySelectorAll(`#${difficulty} .colour`);
-
-// colorPickers.forEach((picker, i) => {
-//     picker.addEventListener("input", (e) => {
-//         const color = e.target.value;
-//         colorBall[i].style.background = color;
-//     })
-// })
 
 //Guardar colores
 document.getElementById("playBtn").addEventListener("click",() => {
