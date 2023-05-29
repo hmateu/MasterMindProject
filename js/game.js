@@ -71,44 +71,44 @@ const paintAvailable = () => {
     });
 }
 
-let victoria = false;
+let victory = false;
 let successBall = 0;
 const rowValidate = () => {
-    if (idDeLaRow < nRows) {
-        const hintBalls = Array.from(document.querySelectorAll(`#row${idDeLaRow} .hintBalls .hintBall`));
+    if (idOfRow < nRows) {
+        const hintBalls = Array.from(document.querySelectorAll(`#row${idOfRow} .hintBalls .hintBall`));
         successBall = 0;
         winnerChoice.forEach((winner, i) => {
             if (winner === currentChoice[i]) {
                 hintBalls[i].style.background = "black";
                 successBall++;
-                victoria = true;
+                victory = true;
             } else {
                 const firstIndex = winnerChoice.findIndex((item) => item === currentChoice[i]);
                 if (firstIndex !== -1 && firstIndex !== i) {
                     hintBalls[i].style.background = "white";
-                    victoria = false;
+                    victory = false;
                 }
             }
         });
-        idDeLaRow += 1;
+        idOfRow += 1;
         currentChoice = [];
         checkButton.classList.add("disabled");
-        if (idDeLaRow == nRows) {
-            if (victoria && successBall == 4) {
+        if (idOfRow == nRows) {
+            if (victory && successBall == 4) {
                 window.location.href="../pages/winner.html"
             } else {
                 window.location.href="../pages/gameOver.html"
             }
         } else {
-            if (victoria && successBall == 4) {
+            if (victory && successBall == 4) {
                 window.location.href="../pages/winner.html"
             }
         }
-        return idDeLaRow;
+        return idOfRow;
     }
 };
 
-let idDeLaRow = 0;
+let idOfRow = 0;
 let currentChoice = [];
 let bolaPintada;
 const createCurrentChoice = (id) => {
@@ -123,7 +123,7 @@ const createCurrentChoice = (id) => {
         case "a0":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[0]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
+                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
                 bolaPintada.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
@@ -134,7 +134,7 @@ const createCurrentChoice = (id) => {
         case "a1":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[1]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
+                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
                 bolaPintada.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
@@ -145,7 +145,7 @@ const createCurrentChoice = (id) => {
         case "a2":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[2]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
+                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
                 bolaPintada.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
@@ -156,7 +156,7 @@ const createCurrentChoice = (id) => {
         case "a3":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[3]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
+                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
                 bolaPintada.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
@@ -167,7 +167,7 @@ const createCurrentChoice = (id) => {
         case "a4":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[4]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
+                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
                 bolaPintada.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
@@ -178,7 +178,7 @@ const createCurrentChoice = (id) => {
         default:
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[5]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idDeLaRow} .ball`));
+                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
                 bolaPintada.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
