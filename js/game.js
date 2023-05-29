@@ -95,13 +95,13 @@ const rowValidate = () => {
         checkButton.classList.add("disabled");
         if (idOfRow == nRows) {
             if (victory && successBall == 4) {
-                window.location.href="../pages/winner.html"
+                window.location.href = "../pages/winner.html";
             } else {
-                window.location.href="../pages/gameOver.html"
+                window.location.href = "../pages/gameOver.html";
             }
         } else {
             if (victory && successBall == 4) {
-                window.location.href="../pages/winner.html"
+                window.location.href = "../pages/winner.html";
             }
         }
         return idOfRow;
@@ -114,10 +114,8 @@ let paintBall;
 const createCurrentChoice = (id) => {
     if (currentChoice.length < 3) {
         checkButton.classList.add("disabled");
-
     } else {
         checkButton.classList.remove("disabled");
-
     }
     switch (id) {
         case "a0":
