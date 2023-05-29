@@ -110,7 +110,7 @@ const rowValidate = () => {
 
 let idOfRow = 0;
 let currentChoice = [];
-let bolaPintada;
+let paintBall;
 const createCurrentChoice = (id) => {
     if (currentChoice.length < 3) {
         checkButton.classList.add("disabled");
@@ -123,8 +123,8 @@ const createCurrentChoice = (id) => {
         case "a0":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[0]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
-                bolaPintada.forEach((element, i) => {
+                paintBall = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
+                paintBall.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
             } else {
@@ -134,8 +134,8 @@ const createCurrentChoice = (id) => {
         case "a1":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[1]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
-                bolaPintada.forEach((element, i) => {
+                paintBall = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
+                paintBall.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
             } else {
@@ -145,8 +145,8 @@ const createCurrentChoice = (id) => {
         case "a2":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[2]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
-                bolaPintada.forEach((element, i) => {
+                paintBall = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
+                paintBall.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
             } else {
@@ -156,8 +156,8 @@ const createCurrentChoice = (id) => {
         case "a3":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[3]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
-                bolaPintada.forEach((element, i) => {
+                paintBall = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
+                paintBall.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
             } else {
@@ -167,8 +167,8 @@ const createCurrentChoice = (id) => {
         case "a4":
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[4]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
-                bolaPintada.forEach((element, i) => {
+                paintBall = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
+                paintBall.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
             } else {
@@ -178,8 +178,8 @@ const createCurrentChoice = (id) => {
         default:
             if (currentChoice.length < 4) {
                 currentChoice.push(availableColours[5]);
-                bolaPintada = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
-                bolaPintada.forEach((element, i) => {
+                paintBall = Array.from(document.querySelectorAll(`#row${idOfRow} .ball`));
+                paintBall.forEach((element, i) => {
                     element.style.background = currentChoice[i];
                 });
             } else {
